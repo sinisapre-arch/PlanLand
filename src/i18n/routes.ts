@@ -1,15 +1,12 @@
 import { useLang } from "./LangContext";
 
 /**
- * Build a locale-prefixed route path. Russian (the default) is un-prefixed,
- * matching the reference site: `/portfolio/`. English gets `/en/portfolio/`.
- * `de` and `ar` are routed under their own prefix but render EN content.
+ * Build a locale-prefixed route path. Russian (the default) is un-prefixed
+ * (`/portfolio/`); English is prefixed (`/en/portfolio/`).
  */
 const LOCALE_PREFIX: Record<string, string> = {
   ru: "",
   en: "/en",
-  de: "/de",
-  ar: "/ar",
 };
 
 export function localePath(locale: string, path: string): string {
@@ -26,9 +23,7 @@ export function useLocalePath() {
 
 /** Strip a known locale prefix from a pathname, returning the base path. */
 export function stripLocalePrefix(pathname: string): string {
-  for (const prefix of ["/en", "/de", "/ar"]) {
-    if (pathname === prefix) return "/";
-    if (pathname.startsWith(`${prefix}/`)) return pathname.slice(prefix.length);
-  }
+  if (pathname === "/en") return "/";
+  if (pathname.startsWith("/en/")) return pathname.slice("/en".length);
   return pathname;
 }

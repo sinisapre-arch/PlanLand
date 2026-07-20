@@ -16,7 +16,7 @@ const navItems: { to: string; key: StringKey }[] = [
   { to: "/contacts", key: "nav.contacts" },
 ];
 
-const LOCALES: Locale[] = ["ru", "en", "de", "ar"];
+const LOCALES: Locale[] = ["ru", "en"];
 
 function LanguageSwitcher() {
   const { locale, setLocale } = useLang();

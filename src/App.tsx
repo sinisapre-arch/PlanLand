@@ -14,8 +14,7 @@ import NotFound from "./pages/NotFound";
 
 /**
  * Shared route tree, used once per locale. Russian is un-prefixed
- * (matching lburo.ru: `/portfolio/`); English/German/Arabic each get
- * their own prefix (`/en/...`, `/de/...`, `/ar/...`).
+ * (`/portfolio/`); English is prefixed (`/en/...`).
  */
 function makeRoutes() {
   return (
@@ -49,10 +48,6 @@ export default function App() {
         <Route path="/*">{makeRoutes()}</Route>
         {/* English */}
         <Route path="/en/*">{makeRoutes()}</Route>
-        {/* German (renders EN content as placeholder) */}
-        <Route path="/de/*">{makeRoutes()}</Route>
-        {/* Arabic (renders EN content as placeholder) */}
-        <Route path="/ar/*">{makeRoutes()}</Route>
       </Route>
     </Routes>
   );
