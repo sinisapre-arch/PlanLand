@@ -7,7 +7,6 @@ import ScandinavianGarden from "./pages/ScandinavianGarden";
 import Services from "./pages/Services";
 import Team from "./pages/Team";
 import Contacts from "./pages/Contacts";
-import Awards from "./pages/Awards";
 import Blog from "./pages/Blog";
 import Legal from "./pages/Legal";
 import NotFound from "./pages/NotFound";
@@ -26,7 +25,6 @@ function makeRoutes() {
       <Route path="services" element={<Services />} />
       <Route path="team" element={<Team />} />
       <Route path="contacts" element={<Contacts />} />
-      <Route path="nagrady" element={<Awards />} />
       <Route path="blog" element={<Blog />} />
       <Route path="blog/:slug" element={<Blog />} />
       {/* Legal pages — same component handles them all. */}

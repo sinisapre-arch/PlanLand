@@ -19,14 +19,13 @@ export const strings = {
   "nav.services": { ru: "Услуги", en: "Services" },
   "nav.team": { ru: "Команда", en: "Team" },
   "nav.contacts": { ru: "Контакты", en: "Contacts" },
-  "nav.awards": { ru: "Награды", en: "Awards" },
   "nav.blog": { ru: "Блог", en: "Blog" },
   "header.openMenu": { ru: "Открыть меню", en: "Open menu" },
 
   // ---- Hero ----
   "hero.eyebrow": {
-    ru: "Ассоциация АЛАРОС признала PlanoLand лучшей ландшафтной студией России в 2025 году.",
-    en: "The ALAROS association named PlanoLand the best landscape studio in Russia in 2025.",
+    ru: "Студия ландшафтного дизайна PlanoLand. Создаём скандинавские сады полного цикла.",
+    en: "PlanoLand landscape design studio. We create full-cycle Scandinavian gardens.",
   },
   "hero.title": {
     ru: "Сад как состояние",
@@ -42,11 +41,6 @@ export const strings = {
   "hero.stat2.label": { ru: "садов в портфолио", en: "gardens in portfolio" },
   "hero.stat3.value": { ru: "7", en: "7" },
   "hero.stat3.label": { ru: "стран мира", en: "countries worldwide" },
-  "hero.stat4.value": { ru: "каждый 5-й", en: "every 5th" },
-  "hero.stat4.label": {
-    ru: "сад отмечен премиями",
-    en: "garden awarded a prize",
-  },
 
   // ---- Featured projects ----
   "featured.label": { ru: "проект", en: "project" },
@@ -196,7 +190,6 @@ export const strings = {
   "project.spec.status": { ru: "Статус", en: "Status" },
   "project.spec.status.realized": { ru: "Реализован", en: "Realized" },
   "project.spec.status.concept": { ru: "Концепция", en: "Concept" },
-  "project.awards": { ru: "Награды", en: "Awards" },
   "project.aboutTitle": { ru: "О проекте", en: "About the project" },
 
   // ---- Render disclaimer (for visualization-only imagery) ----
@@ -242,17 +235,6 @@ export const strings = {
   },
   "contacts.msk": { ru: "Офис в Москве", en: "Moscow office" },
   "contacts.spb": { ru: "Офис в Санкт-Петербурге", en: "St. Petersburg office" },
-
-  // ---- Awards ----
-  "awards.eyebrow": { ru: "Награды", en: "Awards" },
-  "awards.title": {
-    ru: "Признание профессионального сообщества",
-    en: "Recognition by the professional community",
-  },
-  "awards.lede": {
-    ru: "Каждый пятый сад PlanoLand отмечен российской или международной премией. Ниже — избранное за последние годы.",
-    en: "Every fifth PlanoLand garden has won a Russian or international award. Below — a selection from recent years.",
-  },
 
   // ---- Blog ----
   "blog.eyebrow": { ru: "Журнал", en: "Journal" },

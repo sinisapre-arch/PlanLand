@@ -91,58 +91,6 @@ export const team: {
   },
 ];
 
-/** Awards list for the Awards page. */
-export const awards: {
-  year: string;
-  project: string;
-  title: LocalizedString;
-}[] = [
-  {
-    year: "2025",
-    project: "PlanoLand",
-    title: {
-      ru: "Лучшая ландшафтная студия России по версии АЛАРОС",
-      en: "Best landscape studio in Russia by ALAROS",
-    },
-  },
-  {
-    year: "2024",
-    project: "Хрустальное",
-    title: { ru: "BLT GOLD", en: "BLT GOLD" },
-  },
-  {
-    year: "2023",
-    project: "HUGEL",
-    title: { ru: "IADA", en: "IADA" },
-  },
-  {
-    year: "2023",
-    project: "FERMA",
-    title: {
-      ru: "Золотой диплом АЛАРОС",
-      en: "ALAROS Gold Diploma",
-    },
-  },
-  {
-    year: "2022",
-    project: "SYLT",
-    title: { ru: "ALAROS", en: "ALAROS" },
-  },
-  {
-    year: "2020",
-    project: "FERRUM",
-    title: {
-      ru: "Серебряный диплом АЛАРОС",
-      en: "ALAROS Silver Diploma",
-    },
-  },
-  {
-    year: "2019",
-    project: "Дивный сад",
-    title: { ru: "GRAND PRIX", en: "GRAND PRIX" },
-  },
-];
-
 /** Blog posts (representative stubs). */
 export const blogPosts: {
   slug: string;

@@ -18,7 +18,7 @@ export type Project = {
   category: ProjectCategory;
   /** Cover image used on cards & detail hero. */
   image: string;
-  /** Optional badge shown on cards (e.g. "IADA", "ЗОЛОТОЙ ДИПЛОМ"). */
+  /** Optional badge shown on cards. Currently unused (no awards to display). */
   label?: LocalizedString;
   /** Detail-page specs. */
   specs: {
@@ -27,6 +27,7 @@ export type Project = {
     location: LocalizedString;
     status?: "realized" | "concept";
   };
+  /** Optional awards list. Currently unused (no awards to display). */
   awards?: LocalizedString[];
   /** Long-form description shown on the detail page. */
   description: LocalizedString;
@@ -45,16 +46,12 @@ export const projects: Project[] = [
     place: { ru: "Рязанская область, Россия", en: "Ryazan region, Russia" },
     category: "private",
     image: img("3437948834"),
-    label: { ru: "ЗОЛОТОЙ ДИПЛОМ", en: "GOLD DIPLOMA" },
     specs: {
       area: { ru: "6 ГА", en: "6 ha" },
       year: "2023",
       location: { ru: "Рязанская область", en: "Ryazan region" },
       status: "realized",
     },
-    awards: [
-      { ru: "Золотой диплом АЛАРОС", en: "ALAROS Gold Diploma" },
-    ],
     description: {
       ru: "Большая усадьба в Рязанской области: лесной массив, луговые зоны и фермерское хозяйство собраны в единую среду. Парадный вход раскрыт к южному фасаду, служебные и хозяйственные сценарии отведены на периферию.",
       en: "A large estate in the Ryazan region: woodland, meadow zones and a working farm are woven into a single environment. The ceremonial entrance opens to the southern facade, while utility scenarios are pushed to the periphery.",
@@ -74,7 +71,6 @@ export const projects: Project[] = [
       location: { ru: "Тверская область", en: "Tver region" },
       status: "realized",
     },
-    awards: [{ ru: "ALAROS", en: "ALAROS" }],
     description: {
       ru: "Загородный дом на берегу водоёма. Композиция построена на контрасте строгих геометрических площадок и свободных луговых посадок, повторяющих природный рельеф.",
       en: "A waterside country house. The composition is built on the contrast of strict geometric terraces and free meadow plantings that echo the natural terrain.",
@@ -91,14 +87,12 @@ export const projects: Project[] = [
     },
     category: "private",
     image: img("3651842918"),
-    label: { ru: "GOLD DIPLOMA" },
     specs: {
       area: { ru: "0.8 ГА", en: "0.8 ha" },
       year: "2021",
       location: { ru: "Ленинградская область", en: "Leningrad region" },
       status: "realized",
     },
-    awards: [{ ru: "GOLD DIPLOMA", en: "GOLD DIPLOMA" }],
     description: {
       ru: "Архитектурный сад с выраженной каменной оградой (Mauer). Внутренний двор-сад раскрывается по мере движения: от сдержанного входа к открытой лужайке с видом на лес.",
       en: "An architectural garden defined by a strong stone wall (Mauer). The inner courtyard-garden reveals itself as you move — from a restrained entrance to an open lawn facing the forest.",
@@ -115,14 +109,12 @@ export const projects: Project[] = [
     },
     category: "private",
     image: img("3697881396"),
-    label: { ru: "СЕРЕБРЯНЫЙ ДИПЛОМ", en: "SILVER DIPLOMA" },
     specs: {
       area: { ru: "1.5 ГА", en: "1.5 ha" },
       year: "2020",
       location: { ru: "Московская область", en: "Moscow region" },
       status: "realized",
     },
-    awards: [{ ru: "Серебряный диплом АЛАРОС", en: "ALAROS Silver Diploma" }],
     description: {
       ru: "Сад, в котором металл, кортен и дикий камень формируют сдержанную палитру материалов. Растительность подобрана так, чтобы подчеркнуть текстуру поверхностей в любое время года.",
       en: "A garden where metal, corten and wild stone shape a restrained material palette. Planting is chosen to highlight the surface texture year-round.",
@@ -161,14 +153,12 @@ export const projects: Project[] = [
     },
     category: "private",
     image: img("4282744907"),
-    label: { ru: "IADA" },
     specs: {
       area: { ru: "0.6 ГА", en: "0.6 ha" },
       year: "2023",
       location: { ru: "Медное озеро", en: "Mednoye lake" },
       status: "realized",
     },
-    awards: [{ ru: "IADA", en: "IADA" }],
     description: {
       ru: "Участок на берегу Медного озера. Холм (Hugel) организует видовые раскрытия и скрывает служебные зоны, формируя последовательность кадров по мере движения к воде.",
       en: "A plot on the shore of Mednoye lake. A hill (Hugel) organizes framed views and conceals utility zones, building a sequence of shots as you move toward the water.",
@@ -226,14 +216,12 @@ export const projects: Project[] = [
     place: { ru: "Калининград", en: "Kaliningrad" },
     category: "private",
     image: img("1598934213"),
-    label: { ru: "IADA" },
     specs: {
       area: { ru: "0.25 ГА", en: "0.25 ha" },
       year: "2019",
       location: { ru: "Калининград", en: "Kaliningrad" },
       status: "realized",
     },
-    awards: [{ ru: "IADA", en: "IADA" }],
     description: {
       ru: "Историческая вилла 1905 года. Сад отсылает к японской эстетике: сдержанная палитра, мшистые покрытия, листопадные сорта с выраженной сезонностью.",
       en: "A historic 1905 villa. The garden references Japanese aesthetics: a restrained palette, moss surfaces, deciduous species with strong seasonality.",
@@ -249,14 +237,12 @@ export const projects: Project[] = [
     },
     category: "public",
     image: img("962186290"),
-    label: { ru: "BLT GOLD", en: "BLT GOLD" },
     specs: {
       area: { ru: "12 ГА", en: "12 ha" },
       year: "2024",
       location: { ru: "Санкт-Петербург", en: "St. Petersburg" },
       status: "realized",
     },
-    awards: [{ ru: "BLT GOLD", en: "BLT GOLD" }],
     description: {
       ru: "Общественное пространство в Курортном районе. Сценарий ориентирован на отдыхающих и местных жителей: прогулочные маршруты, зоны тишины и точки активности у воды.",
       en: "A public space in the Resort district. The program is built around holidaymakers and locals: walking routes, quiet zones and activity hubs by the water.",
@@ -272,14 +258,12 @@ export const projects: Project[] = [
     },
     category: "private",
     image: img("4137702356"),
-    label: { ru: "GRAND PRIX", en: "GRAND PRIX" },
     specs: {
       area: { ru: "0.5 ГА", en: "0.5 ha" },
       year: "2018",
       location: { ru: "Солнечное", en: "Solnechnoye" },
       status: "realized",
     },
-    awards: [{ ru: "GRAND PRIX", en: "GRAND PRIX" }],
     description: {
       ru: "«Дивный сад» — игра с масштабом и перспективой: миниатюрные сцены и крупные формальные посадки чередуются, создавая ощущение большего пространства на небольшом участке.",
       en: "A “wondrous garden” — a play of scale and perspective: miniature scenes alternate with large formal plantings, creating a sense of greater space on a small plot.",

@@ -42,13 +42,12 @@ function Hero() {
           <p className="max-w-xl text-base leading-relaxed text-graphite/85 sm:text-xl lg:text-2xl lg:leading-snug">
             {t("hero.lede")}
           </p>
-          <dl className="grid w-full max-w-2xl grid-cols-2 gap-px overflow-hidden border border-graphite/20 bg-graphite/20 sm:grid-cols-4">
+          <dl className="grid w-full max-w-2xl grid-cols-3 gap-px overflow-hidden border border-graphite/20 bg-graphite/20">
             {(
               [
                 ["hero.stat1.value", "hero.stat1.label"],
                 ["hero.stat2.value", "hero.stat2.label"],
                 ["hero.stat3.value", "hero.stat3.label"],
-                ["hero.stat4.value", "hero.stat4.label"],
               ] as const
             ).map(([valueKey, labelKey]) => (
               <div key={valueKey} className="bg-cream/85 p-4 sm:p-5">

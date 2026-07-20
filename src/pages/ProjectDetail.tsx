@@ -80,24 +80,6 @@ export default function ProjectDetail() {
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-graphite/80">
               {description}
             </p>
-
-            {project.awards && project.awards.length > 0 && (
-              <div className="mt-10">
-                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/55">
-                  {t("project.awards")}
-                </p>
-                <ul className="flex flex-wrap gap-2">
-                  {project.awards.map((award) => (
-                    <li
-                      key={award.ru}
-                      className="border border-graphite/25 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em]"
-                    >
-                      {award[contentLocale] ?? award.ru}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </div>
 
           <dl className="grid grid-cols-2 gap-px border border-graphite/20 bg-graphite/20 lg:grid-cols-1">
