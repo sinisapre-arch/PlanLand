@@ -4,6 +4,9 @@ import { featuredProjects, projects } from "../data/projects";
 import { principles } from "../data/content";
 import ProjectCard from "../components/ProjectCard";
 import Seo from "../components/Seo";
+import FormStatus from "../components/FormStatus";
+import { useTelegramForm } from "../lib/useTelegramForm";
+import { FIELD_LIMITS } from "../lib/telegram";
 import { useLang } from "../i18n/LangContext";
 import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";
@@ -233,6 +236,8 @@ function PortfolioPreview() {
 
 function CatalogCta() {
   const t = useT();
+  const form = useTelegramForm("catalog");
+  const isSending = form.status.kind === "sending";
   return (
     <section className="bg-graphite px-4 py-16 text-cream sm:px-6 lg:px-10 lg:py-24">
       <div className="mx-auto grid max-w-[1760px] gap-10 lg:grid-cols-[1fr_0.65fr] lg:items-end">
@@ -246,23 +251,40 @@ function CatalogCta() {
         </div>
         <form
           className="grid gap-3 border border-cream/30 p-4 sm:p-6"
-          onSubmit={(event) => event.preventDefault()}
+          onSubmit={async (event) => {
+            event.preventDefault();
+            await form.submit();
+          }}
         >
           <input
+            type="text"
+            required
+            minLength={FIELD_LIMITS.name.min}
+            maxLength={FIELD_LIMITS.name.max}
+            value={form.values.name}
+            onChange={(e) => form.setValue("name", e.target.value)}
             className="h-12 border border-cream/30 bg-transparent px-4 text-sm uppercase tracking-[0.12em] outline-none placeholder:text-cream/45"
             placeholder={t("cta.name")}
           />
           <input
+            type="text"
+            required
+            minLength={FIELD_LIMITS.contact.min}
+            maxLength={FIELD_LIMITS.contact.max}
+            value={form.values.contact}
+            onChange={(e) => form.setValue("contact", e.target.value)}
             className="h-12 border border-cream/30 bg-transparent px-4 text-sm uppercase tracking-[0.12em] outline-none placeholder:text-cream/45"
             placeholder={t("cta.contact")}
           />
           <button
             type="submit"
-            className="mt-2 flex h-14 items-center justify-between bg-cream px-5 text-[11px] font-black uppercase tracking-[0.22em] text-graphite transition hover:bg-moss hover:text-cream"
+            disabled={isSending}
+            className="mt-2 flex h-14 items-center justify-between bg-cream px-5 text-[11px] font-black uppercase tracking-[0.22em] text-graphite transition hover:bg-moss hover:text-cream disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {t("cta.submit")}
+            {isSending ? t("form.sending") : t("cta.submit")}
             <img src={assets.download} alt="" className="h-5 w-5" />
           </button>
+          <FormStatus status={form.status} text={form.statusText} tone="light" />
           <p className="text-[10px] leading-relaxed text-cream/50">{t("cta.consent")}</p>
         </form>
       </div>
@@ -274,7 +296,7 @@ export default function Home() {
   const t = useT();
   return (
     <>
-      <Seo title="L.BURO — Ландшафтная студия полного цикла" description={t("hero.lede")} />
+      <Seo title="PlanoLand — Ландшафтная студия полного цикла" description={t("hero.lede")} />
       <Hero />
       <FeaturedProjects />
       <Studio />

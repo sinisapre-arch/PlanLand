@@ -5,7 +5,7 @@ type Props = {
   description?: string;
 };
 
-const SITE_NAME = "L.BURO";
+const SITE_NAME = "PlanoLand";
 
 /** Lightweight per-route document title/meta manager (no extra deps). */
 export default function Seo({ title, description }: Props) {

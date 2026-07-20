@@ -97,7 +97,7 @@ export const awards: {
 }[] = [
   {
     year: "2025",
-    project: "L.BURO",
+    project: "PlanoLand",
     title: {
       ru: "Лучшая ландшафтная студия России по версии АЛАРОС",
       en: "Best landscape studio in Russia by ALAROS",

@@ -4,6 +4,11 @@ import Seo from "../components/Seo";
 import { useLang } from "../i18n/LangContext";
 import { useT, type StringKey } from "../i18n/useT";
 
+// TODO(rebrand): domain + legal entity below are placeholders for the old
+// lburo.ru / ООО «Л-Бюро» values. Replace with PlanoLand's real domain and
+// registered legal entity once confirmed.
+const SITE_DOMAIN = "planoland.ru";
+
 type LegalDoc = {
   key: "policy" | "agree" | "documents" | "policy-yandex";
   titleKey: StringKey;
@@ -19,14 +24,14 @@ const docs: LegalDoc[] = [
     updated: "2026-01-15",
     body: {
       ru: [
-        "Настоящая Политика обработки персональных данных определяет порядок обработки и защиты ООО «Л-Бюро» информации о физических лицах, которая может быть получена при использовании сайта lburo.ru.",
+        `Настоящая Политика обработки персональных данных определяет порядок обработки и защиты PlanoLand информации о физических лицах, которая может быть получена при использовании сайта ${SITE_DOMAIN}.`,
         "Обработка персональных данных осуществляется на принципах законности, целевого использования и конфиденциальности. Согласие пользователя является правовым основанием обработки.",
-        "Пользователь вправе отозвать согласие, направив заявление на lb@lburo.ru.",
+        "Пользователь вправе отозвать согласие, направив заявление на электронную почту студии.",
       ],
       en: [
-        "This Personal Data Processing Policy defines how L-Buro LLC handles and protects information about individuals obtained through the use of lburo.ru.",
+        `This Personal Data Processing Policy defines how PlanoLand handles and protects information about individuals obtained through the use of ${SITE_DOMAIN}.`,
         "Personal data is processed on the principles of legality, purpose limitation and confidentiality. User consent is the legal basis for processing.",
-        "The user may withdraw consent by sending a statement to lb@lburo.ru.",
+        "The user may withdraw consent by sending a statement to the studio email.",
       ],
     },
   },
@@ -36,12 +41,12 @@ const docs: LegalDoc[] = [
     updated: "2026-01-15",
     body: {
       ru: [
-        "Используя сайт lburo.ru, пользователь соглашается с настоящим Пользовательским соглашением.",
-        "Все материалы сайта являются объектом авторского права и могут быть использованы только с письменного разрешения ООО «Л-Бюро».",
+        `Используя сайт ${SITE_DOMAIN}, пользователь соглашается с настоящим Пользовательским соглашением.`,
+        "Все материалы сайта являются объектом авторского права и могут быть использованы только с письменного разрешения PlanoLand.",
       ],
       en: [
-        "By using lburo.ru, the user agrees to this User Agreement.",
-        "All site materials are protected by copyright and may be used only with written permission of L-Buro LLC.",
+        `By using ${SITE_DOMAIN}, the user agrees to this User Agreement.`,
+        "All site materials are protected by copyright and may be used only with written permission of PlanoLand.",
       ],
     },
   },
@@ -51,11 +56,11 @@ const docs: LegalDoc[] = [
     updated: "2026-01-15",
     body: {
       ru: [
-        "Раздел содержит документы, необходимые для работы с ООО «Л-Бюро»: уставные документы, реквизиты, типовые формы договоров.",
+        "Раздел содержит документы, необходимые для работы с PlanoLand: уставные документы, реквизиты, типовые формы договоров.",
         "По запросу менеджер пришлёт актуальный комплект документов на электронную почту.",
       ],
       en: [
-        "This section contains the documents needed to work with L-Buro LLC: statutory documents, company details and standard contract templates.",
+        "This section contains the documents needed to work with PlanoLand: statutory documents, company details and standard contract templates.",
         "On request, the manager will send the current document set by email.",
       ],
     },
@@ -66,11 +71,11 @@ const docs: LegalDoc[] = [
     updated: "2026-01-15",
     body: {
       ru: [
-        "Сайт lburo.ru использует сервис Яндекс.Метрика, который применяет cookies для сбора статистики посещений.",
+        `Сайт ${SITE_DOMAIN} использует сервис Яндекс.Метрика, который применяет cookies для сбора статистики посещений.`,
         "Отключить сбор данных можно в настройках браузера или через сервис Яндекса.",
       ],
       en: [
-        "The lburo.ru site uses Yandex.Metrica, which uses cookies to collect visit statistics.",
+        `The ${SITE_DOMAIN} site uses Yandex.Metrica, which uses cookies to collect visit statistics.`,
         "Data collection can be disabled in the browser settings or via the Yandex service.",
       ],
     },

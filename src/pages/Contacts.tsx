@@ -1,12 +1,17 @@
 import { contactInfo } from "../data/assets";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
+import FormStatus from "../components/FormStatus";
+import { useTelegramForm } from "../lib/useTelegramForm";
+import { FIELD_LIMITS } from "../lib/telegram";
 import { useLang } from "../i18n/LangContext";
 import { useT } from "../i18n/useT";
 
 export default function Contacts() {
   const t = useT();
   const { contentLocale } = useLang();
+  const form = useTelegramForm("contact");
+  const isSending = form.status.kind === "sending";
 
   const offices = [
     {
@@ -38,27 +43,47 @@ export default function Contacts() {
           {/* Form */}
           <form
             className="grid gap-3 border border-graphite/25 p-5 sm:p-8"
-            onSubmit={(event) => event.preventDefault()}
+            onSubmit={async (event) => {
+              event.preventDefault();
+              await form.submit();
+            }}
           >
             <input
+              type="text"
+              required
+              minLength={FIELD_LIMITS.name.min}
+              maxLength={FIELD_LIMITS.name.max}
+              value={form.values.name}
+              onChange={(e) => form.setValue("name", e.target.value)}
               className="h-12 border border-graphite/30 bg-transparent px-4 text-sm uppercase tracking-[0.12em] outline-none placeholder:text-graphite/45"
               placeholder={t("cta.name")}
             />
             <input
+              type="text"
+              required
+              minLength={FIELD_LIMITS.contact.min}
+              maxLength={FIELD_LIMITS.contact.max}
+              value={form.values.contact}
+              onChange={(e) => form.setValue("contact", e.target.value)}
               className="h-12 border border-graphite/30 bg-transparent px-4 text-sm uppercase tracking-[0.12em] outline-none placeholder:text-graphite/45"
               placeholder={t("cta.contact")}
             />
             <textarea
               rows={5}
+              maxLength={FIELD_LIMITS.message.max}
+              value={form.values.message}
+              onChange={(e) => form.setValue("message", e.target.value)}
               className="border border-graphite/30 bg-transparent px-4 py-3 text-sm uppercase tracking-[0.12em] outline-none placeholder:text-graphite/45"
-              placeholder={contentLocale === "en" ? "Tell us about your plot" : "Расскажите о своём участке"}
+              placeholder={t("form.messagePlaceholder")}
             />
             <button
               type="submit"
-              className="mt-2 flex h-14 items-center justify-center bg-graphite text-[11px] font-black uppercase tracking-[0.22em] text-cream transition hover:bg-moss"
+              disabled={isSending}
+              className="mt-2 flex h-14 items-center justify-center bg-graphite text-[11px] font-black uppercase tracking-[0.22em] text-cream transition hover:bg-moss disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {contentLocale === "en" ? "Send request" : "Отправить заявку"}
+              {isSending ? t("form.sending") : t("form.submit")}
             </button>
+            <FormStatus status={form.status} text={form.statusText} tone="dark" />
             <p className="text-[10px] leading-relaxed text-graphite/50">{t("cta.consent")}</p>
           </form>
 

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { assets, contactInfo } from "../data/assets";
+import { contactInfo } from "../data/assets";
 import { useLang, type Locale } from "../i18n/LangContext";
 import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";
 import type { StringKey } from "../i18n/useT";
+import Wordmark from "./Wordmark";
 
 const navItems: { to: string; key: StringKey }[] = [
   { to: "/", key: "nav.home" },
@@ -53,8 +54,8 @@ export default function Header() {
             {t("nav.public")}
           </Link>
         </div>
-        <Link to={lp("/")} className="shrink-0" aria-label="L.BURO home">
-          <img src={assets.logo} alt="Logo L.BURO" className="h-9 w-auto sm:h-11" />
+        <Link to={lp("/")} className="shrink-0" aria-label="PlanoLand home">
+          <Wordmark size="sm" />
         </Link>
         <nav className="hidden flex-1 justify-center gap-5 xl:flex">
           {navItems.map((item) => (

@@ -19,6 +19,8 @@ export const assets = {
   },
 } as const;
 
+// TODO(rebrand): replace with PlanoLand's real contact details.
+// Values below are inherited from the old L.BURO site and need updating.
 export const contactInfo = {
   phones: ["+7 (495) 822-66-55", "+7 (812) 507-66-55"],
   phoneHrefs: ["tel:+74958226655", "tel:+78125076655"],

@@ -25,8 +25,8 @@ export const strings = {
 
   // ---- Hero ----
   "hero.eyebrow": {
-    ru: "Ассоциация АЛАРОС признала L.BURO лучшей ландшафтной студией России в 2025 году.",
-    en: "The ALAROS association named L.BURO the best landscape studio in Russia in 2025.",
+    ru: "Ассоциация АЛАРОС признала PlanoLand лучшей ландшафтной студией России в 2025 году.",
+    en: "The ALAROS association named PlanoLand the best landscape studio in Russia in 2025.",
   },
   "hero.title": {
     ru: "Сад как состояние",
@@ -53,16 +53,16 @@ export const strings = {
 
   // ---- Studio ----
   "studio.eyebrow": {
-    ru: "Студия ландшафтного дизайна L.BURO",
-    en: "L.BURO landscape design studio",
+    ru: "Студия ландшафтного дизайна PlanoLand",
+    en: "PlanoLand landscape design studio",
   },
   "studio.title": {
     ru: "Создаём среду, где рождаются новые сценарии жизни",
     en: "We create spaces where new life scenarios are born",
   },
   "studio.caption": {
-    ru: "Пётр Лари и Валерий Федотов — основатели L.BURO",
-    en: "Peter Lari and Valery Fedotov — founders of L.BURO",
+    ru: "Пётр Лари и Валерий Федотов — основатели PlanoLand",
+    en: "Peter Lari and Valery Fedotov — founders of PlanoLand",
   },
   "studio.quote": {
     ru: "Не «у меня есть сад», а «я нахожусь в саду».",
@@ -73,8 +73,8 @@ export const strings = {
     en: "A garden is a way to be here and now. A space that changes how you think and live, where a person feels grounded and connected to themselves and the world.",
   },
   "studio.body2": {
-    ru: "Скандинавский сад — фирменный стиль L.BURO. Это философия ощущения, состояния и мысли, созданная главным архитектором Петром Лари.",
-    en: "The Scandinavian garden is L.BURO’s signature style — a philosophy of feeling, state and thought, created by principal architect Peter Lari.",
+    ru: "Скандинавский сад — фирменный стиль PlanoLand. Это философия ощущения, состояния и мысли, созданная главным архитектором Петром Лари.",
+    en: "The Scandinavian garden is PlanoLand’s signature style — a philosophy of feeling, state and thought, created by principal architect Peter Lari.",
   },
   "studio.cta": { ru: "Подробнее о нас", en: "More about us" },
 
@@ -101,8 +101,8 @@ export const strings = {
     en: "Private gardens catalogue",
   },
   "cta.title": {
-    ru: "Получите подборку проектов L.BURO",
-    en: "Get a selection of L.BURO projects",
+    ru: "Получите подборку проектов PlanoLand",
+    en: "Get a selection of PlanoLand projects",
   },
   "cta.name": { ru: "Ваше имя", en: "Your name" },
   "cta.contact": { ru: "Телефон или email", en: "Phone or email" },
@@ -112,6 +112,50 @@ export const strings = {
     en: "By clicking the button you agree to the processing of personal data.",
   },
 
+  // ---- Form status / validation (Telegram submission) ----
+  "form.message": {
+    ru: "Сообщение",
+    en: "Message",
+  },
+  "form.messagePlaceholder": {
+    ru: "Расскажите о своём участке",
+    en: "Tell us about your plot",
+  },
+  "form.submit": { ru: "Отправить", en: "Send" },
+  "form.sending": { ru: "Отправка…", en: "Sending…" },
+  "form.success": {
+    ru: "Сообщение отправлено! ✓",
+    en: "Message sent! ✓",
+  },
+  "form.error.required": {
+    ru: "Пожалуйста, заполните обязательные поля.",
+    en: "Please fill in the required fields.",
+  },
+  "form.error.too_short": {
+    ru: "Слишком короткое значение.",
+    en: "Value is too short.",
+  },
+  "form.error.too_long": {
+    ru: "Слишком длинное значение.",
+    en: "Value is too long.",
+  },
+  "form.error.name": {
+    ru: "Введите имя (2–100 символов).",
+    en: "Please enter a name (2–100 characters).",
+  },
+  "form.error.contact": {
+    ru: "Введите телефон или email (5–254 символа).",
+    en: "Please enter a phone or email (5–254 characters).",
+  },
+  "form.error.message": {
+    ru: "Сообщение слишком короткое или слишком длинное (10–2000 символов).",
+    en: "Message is too short or too long (10–2000 characters).",
+  },
+  "form.error.send": {
+    ru: "Ошибка отправки. Попробуйте ещё раз.",
+    en: "Failed to send. Please try again.",
+  },
+
   // ---- Footer ----
   "footer.msk": { ru: "Москва, ул. Саврасова, д. 7, помещ. 2", en: "Moscow, Savrasova st., 7, prem. 2" },
   "footer.spb": {
@@ -119,8 +163,8 @@ export const strings = {
     en: "St. Petersburg, Bolshoy Sampsonievsky pr., 28 bldg. 2, Mezon Plaza BC, office 643",
   },
   "footer.rights": {
-    ru: "2020–2026. Материалы сайта могут быть использованы только с разрешения ООО «Л-Бюро».",
-    en: "2020–2026. Site materials may be used only with permission of L-Buro LLC.",
+    ru: "2020–2026. Материалы сайта могут быть использованы только с разрешения PlanoLand.",
+    en: "2020–2026. Site materials may be used only with permission of PlanoLand.",
   },
   "footer.policy": {
     ru: "Политика обработки персональных данных",
@@ -176,7 +220,7 @@ export const strings = {
   },
 
   // ---- Team ----
-  "team.eyebrow": { ru: "Команда L.BURO", en: "The L.BURO team" },
+  "team.eyebrow": { ru: "Команда PlanoLand", en: "The PlanoLand team" },
   "team.title": {
     ru: "Люди, которые создают сады",
     en: "The people who make gardens",
@@ -206,8 +250,8 @@ export const strings = {
     en: "Recognition by the professional community",
   },
   "awards.lede": {
-    ru: "Каждый пятый сад L.BURO отмечен российской или международной премией. Ниже — избранное за последние годы.",
-    en: "Every fifth L.BURO garden has won a Russian or international award. Below — a selection from recent years.",
+    ru: "Каждый пятый сад PlanoLand отмечен российской или международной премией. Ниже — избранное за последние годы.",
+    en: "Every fifth PlanoLand garden has won a Russian or international award. Below — a selection from recent years.",
   },
 
   // ---- Blog ----

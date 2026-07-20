@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { assets, contactInfo } from "../data/assets";
 import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";
+import Wordmark from "./Wordmark";
 
 export default function Footer() {
   const t = useT();
@@ -12,7 +13,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1760px] gap-10 border-t border-graphite/25 pt-10 lg:grid-cols-[0.8fr_1.2fr_1fr]">
         <div>
           <Link to={lp("/")}>
-            <img src={assets.logo} alt="Logo L.BURO" className="h-12 w-auto" />
+            <Wordmark size="lg" />
           </Link>
           <div className="mt-8 flex flex-col gap-2 text-sm font-semibold uppercase tracking-[0.12em]">
             <a href={contactInfo.phoneHrefs[0]}>{contactInfo.phones[0]}</a>

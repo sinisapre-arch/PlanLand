@@ -50,8 +50,8 @@ export default function Portfolio() {
         title={t("portfolio.title")}
         description={
           contentLocale === "en"
-            ? "L.BURO landscape projects in Moscow and St. Petersburg."
-            : "Портфолио проектов ландшафтной студии L.BURO в Москве и Санкт-Петербурге."
+            ? "PlanoLand landscape projects in Moscow and St. Petersburg."
+            : "Портфолио проектов ландшафтной студии PlanoLand в Москве и Санкт-Петербурге."
         }
       />
       <PageHeader eyebrow={t("nav.portfolio")} title={t("portfolio.title")} tone="cream" />
