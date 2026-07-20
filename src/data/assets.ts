@@ -4,8 +4,9 @@
  */
 export const assets = {
   logo: "https://ext.same-assets.com/3686561945/4078982152.svg",
-  hero: "https://ext.same-assets.com/3686561945/2915188378.webp",
-  studio: "https://ext.same-assets.com/3686561945/3484833766.webp",
+  // Local optimized assets (see scripts/optimize-images.mjs).
+  hero: "/images/hero/hero.webp",
+  studio: "/images/studio/founders.webp",
   bg3: "https://ext.same-assets.com/3686561945/3311752931.webp",
   download: "https://ext.same-assets.com/3686561945/4226156107.svg",
   socials: {
