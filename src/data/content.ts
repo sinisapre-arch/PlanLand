@@ -1,0 +1,191 @@
+import type { LocalizedString } from "./projects";
+
+/** Principles shown on the home page and Scandinavian-garden page. */
+export const principles: LocalizedString[] = [
+  { ru: "Приглашает природу на участок", en: "Invites nature onto the plot" },
+  { ru: "Имеет характер", en: "Has character" },
+  { ru: "Геометричен", en: "Is geometric" },
+  { ru: "Обладает чистотой основы", en: "Has clarity of base" },
+  { ru: "Вдохновлён нуаром", en: "Is noir-inspired" },
+  { ru: "Сказочный", en: "Is fairy-tale" },
+];
+
+/** Services (title + body pairs for the Services page). */
+export const services: { title: LocalizedString; body: LocalizedString }[] = [
+  {
+    title: { ru: "Предпроектное обследование", en: "Pre-project survey" },
+    body: {
+      ru: "Выезд на участок, инженерная и дендрологическая съёмка, анализ почв и инсоляции. На этом этапе фиксируются ограничения и возможности территории.",
+      en: "Site visit, engineering and dendrological survey, soil and insolation analysis. Constraints and opportunities of the plot are fixed at this stage.",
+    },
+  },
+  {
+    title: { ru: "Концептуальный проект", en: "Concept design" },
+    body: {
+      ru: "Эскизное планировочное решение, зонирование, образ сада. Согласуем сценарии и характер среды до перехода к рабочей документации.",
+      en: "Sketch planning solution, zoning, the garden’s image. We agree on scenarios and the character of the environment before moving to working documentation.",
+    },
+  },
+  {
+    title: { ru: "Рабочая документация", en: "Detailed design" },
+    body: {
+      ru: "Разбивочный и посадочный чертежи, схемы полива и освещения, малые формы. Полный комплект для реализации под ключ.",
+      en: "Setting-out and planting drawings, irrigation and lighting schemes, street furniture. A full set for turnkey implementation.",
+    },
+  },
+  {
+    title: { ru: "Авторский надзор", en: "Design supervision" },
+    body: {
+      ru: "Сопровождаем стройку, контролируем соблюдение проекта и оперативно вносим корректировки по месту.",
+      en: "We supervise construction, check compliance with the design and make prompt on-site adjustments.",
+    },
+  },
+  {
+    title: { ru: "Реализация", en: "Implementation" },
+    body: {
+      ru: "Заводим собственные бригады и подрядчиков. Полный цикл работ по благоустройству — от вертикальной планировки до посадки крупномеров.",
+      en: "We bring our own crews and contractors. A full scope of works — from vertical grading to planting mature specimens.",
+    },
+  },
+  {
+    title: { ru: "Уход", en: "Maintenance" },
+    body: {
+      ru: "Сезонное обслуживание сада по регламенту. Помогаем саду войти в форму и поддерживаем его десятилетиями.",
+      en: "Seasonal maintenance on a schedule. We help the garden settle in and maintain it for decades.",
+    },
+  },
+];
+
+/** Team members. */
+export const team: {
+  name: string;
+  role: LocalizedString;
+  bio: LocalizedString;
+  photo: string;
+}[] = [
+  {
+    name: "Пётр Лари",
+    role: {
+      ru: "Главный архитектор, сооснователь",
+      en: "Principal architect, co-founder",
+    },
+    bio: {
+      ru: "Создатель стиля «скандинавский сад». В ландшафтной архитектуре с 1993 года, лауреат российских и международных премий.",
+      en: "Creator of the “Scandinavian garden” style. In landscape architecture since 1993, winner of Russian and international awards.",
+    },
+    photo: "https://ext.same-assets.com/3686561945/3484833766.webp",
+  },
+  {
+    name: "Валерий Федотов",
+    role: {
+      ru: "Директор, сооснователь",
+      en: "Director, co-founder",
+    },
+    bio: {
+      ru: "Отвечает за операционное направление студии. В бизнесе с 1991 года, выстроил процесс от первой встречи до сдачи сада.",
+      en: "Leads the studio’s operations. In business since 1991, has built the process from first meeting to garden handover.",
+    },
+    photo: "https://ext.same-assets.com/3686561945/3484833766.webp",
+  },
+];
+
+/** Awards list for the Awards page. */
+export const awards: {
+  year: string;
+  project: string;
+  title: LocalizedString;
+}[] = [
+  {
+    year: "2025",
+    project: "L.BURO",
+    title: {
+      ru: "Лучшая ландшафтная студия России по версии АЛАРОС",
+      en: "Best landscape studio in Russia by ALAROS",
+    },
+  },
+  {
+    year: "2024",
+    project: "Хрустальное",
+    title: { ru: "BLT GOLD", en: "BLT GOLD" },
+  },
+  {
+    year: "2023",
+    project: "HUGEL",
+    title: { ru: "IADA", en: "IADA" },
+  },
+  {
+    year: "2023",
+    project: "FERMA",
+    title: {
+      ru: "Золотой диплом АЛАРОС",
+      en: "ALAROS Gold Diploma",
+    },
+  },
+  {
+    year: "2022",
+    project: "SYLT",
+    title: { ru: "ALAROS", en: "ALAROS" },
+  },
+  {
+    year: "2020",
+    project: "FERRUM",
+    title: {
+      ru: "Серебряный диплом АЛАРОС",
+      en: "ALAROS Silver Diploma",
+    },
+  },
+  {
+    year: "2019",
+    project: "Дивный сад",
+    title: { ru: "GRAND PRIX", en: "GRAND PRIX" },
+  },
+];
+
+/** Blog posts (representative stubs). */
+export const blogPosts: {
+  slug: string;
+  title: LocalizedString;
+  excerpt: LocalizedString;
+  date: string;
+  image: string;
+}[] = [
+  {
+    slug: "scandinavian-garden-philosophy",
+    title: {
+      ru: "Философия скандинавского сада",
+      en: "The philosophy of the Scandinavian garden",
+    },
+    excerpt: {
+      ru: "Почему сдержанность и геометрия важнее обилия деталей, и как это связано с климатом.",
+      en: "Why restraint and geometry matter more than abundance of detail, and how it ties to climate.",
+    },
+    date: "2026-03-14",
+    image: "https://ext.same-assets.com/3686561945/3311752931.webp",
+  },
+  {
+    slug: "materials-and-texture",
+    title: {
+      ru: "Материалы и текстура: кортен, камень, мох",
+      en: "Materials and texture: corten, stone, moss",
+    },
+    excerpt: {
+      ru: "Как палитра поверхностей формирует ощущение сада зимой и летом.",
+      en: "How the surface palette shapes the feel of the garden in winter and summer.",
+    },
+    date: "2026-02-02",
+    image: "https://ext.same-assets.com/3686561945/3484833766.webp",
+  },
+  {
+    slug: "north-climate-planting",
+    title: {
+      ru: "Посадки для северного климата",
+      en: "Planting for a northern climate",
+    },
+    excerpt: {
+      ru: "Подбор ассортимента для короткого вегетационного периода и холодных зим.",
+      en: "Choosing a plant palette for a short growing season and cold winters.",
+    },
+    date: "2026-01-20",
+    image: "https://ext.same-assets.com/3686561945/2915188378.webp",
+  },
+];

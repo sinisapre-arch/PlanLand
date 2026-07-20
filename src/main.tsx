@@ -1,11 +1,19 @@
 import "same-runtime";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
+import { LangProvider } from "./i18n/LangContext.tsx";
 
 const rootElement = document.getElementById("root");
 if (!rootElement) {
   throw new Error("Failed to find root element");
 }
 
-createRoot(rootElement).render(<App />);
+createRoot(rootElement).render(
+  <BrowserRouter>
+    <LangProvider>
+      <App />
+    </LangProvider>
+  </BrowserRouter>,
+);
