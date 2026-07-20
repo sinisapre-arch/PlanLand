@@ -61,8 +61,8 @@ export const strings = {
     en: "We create spaces where new life scenarios are born",
   },
   "studio.caption": {
-    ru: "Пётр Лари и Валерий Федотов — основатели PlanoLand",
-    en: "Peter Lari and Valery Fedotov — founders of PlanoLand",
+    ru: "Синиша Предраговић и Лыхно Георгий Александрович — основатели PlanoLand",
+    en: "Siniša Predragović and Georgiy A. Lykhno — founders of PlanoLand",
   },
   "studio.quote": {
     ru: "Не «у меня есть сад», а «я нахожусь в саду».",
@@ -73,8 +73,8 @@ export const strings = {
     en: "A garden is a way to be here and now. A space that changes how you think and live, where a person feels grounded and connected to themselves and the world.",
   },
   "studio.body2": {
-    ru: "Скандинавский сад — фирменный стиль PlanoLand. Это философия ощущения, состояния и мысли, созданная главным архитектором Петром Лари.",
-    en: "The Scandinavian garden is PlanoLand’s signature style — a philosophy of feeling, state and thought, created by principal architect Peter Lari.",
+    ru: "Скандинавский сад — фирменный стиль PlanoLand. Это философия ощущения, состояния и мысли, в которой среда формируется вокруг человека.",
+    en: "The Scandinavian garden is PlanoLand’s signature style — a philosophy of feeling, state and thought, where the environment is shaped around the person.",
   },
   "studio.cta": { ru: "Подробнее о нас", en: "More about us" },
 

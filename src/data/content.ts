@@ -64,28 +64,30 @@ export const team: {
   photo: string;
 }[] = [
   {
-    name: "Пётр Лари",
+    // Name rendered in Russian (site primary language).
+    name: "Синиша Предраговић",
     role: {
-      ru: "Главный архитектор, сооснователь",
-      en: "Principal architect, co-founder",
+      ru: "Сооснователь",
+      en: "Co-founder",
     },
     bio: {
-      ru: "Создатель стиля «скандинавский сад». В ландшафтной архитектуре с 1993 года, лауреат российских и международных премий.",
-      en: "Creator of the “Scandinavian garden” style. In landscape architecture since 1993, winner of Russian and international awards.",
+      ru: "Сооснователь PlanoLand. Отвечает за творческое направление студии и архитектурные решения проектов.",
+      en: "Co-founder of PlanoLand. Leads the studio’s creative direction and the architectural decisions behind each project.",
     },
-    photo: "https://ext.same-assets.com/3686561945/3484833766.webp",
+    photo: "/images/studio/founders.webp",
   },
   {
-    name: "Валерий Федотов",
+    // Name rendered in Russian (site primary language).
+    name: "Лыхно Георгий Александрович",
     role: {
-      ru: "Директор, сооснователь",
-      en: "Director, co-founder",
+      ru: "Сооснователь",
+      en: "Co-founder",
     },
     bio: {
-      ru: "Отвечает за операционное направление студии. В бизнесе с 1991 года, выстроил процесс от первой встречи до сдачи сада.",
-      en: "Leads the studio’s operations. In business since 1991, has built the process from first meeting to garden handover.",
+      ru: "Сооснователь PlanoLand. Курирует операционную часть студии и сопровождает проекты от первой встречи до сдачи сада.",
+      en: "Co-founder of PlanoLand. Oversees the studio’s operations and guides projects from the first meeting to garden handover.",
     },
-    photo: "https://ext.same-assets.com/3686561945/3484833766.webp",
+    photo: "/images/studio/founders.webp",
   },
 ];
 

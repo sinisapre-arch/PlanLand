@@ -114,7 +114,7 @@ function Studio() {
         <div className="relative min-h-[520px] overflow-hidden lg:min-h-[760px]">
           <img
             src={assets.studio}
-            alt="Peter Lari and Valery Fedotov"
+            alt="Siniša Predragović and Georgiy A. Lykhno"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent p-6 text-cream">
