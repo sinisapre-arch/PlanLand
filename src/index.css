@@ -75,20 +75,3 @@ input {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
-/* Project gallery: Pinterest-style masonry.
-   Uses CSS multi-column layout so each image keeps its natural aspect
-   ratio (no forced crop). Column count scales up on wider screens. */
-.gallery-masonry {
-  column-count: 1;
-}
-@media (min-width: 640px) {
-  .gallery-masonry {
-    column-count: 2;
-  }
-}
-@media (min-width: 1024px) {
-  .gallery-masonry {
-    column-count: 3;
-  }
-}
