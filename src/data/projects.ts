@@ -41,15 +41,15 @@ const img = (id: string) => `https://ext.same-assets.com/3686561945/${id}.webp`;
 
 export const projects: Project[] = [
   {
-    slug: "ferma",
-    title: "FERMA",
-    place: { ru: "Рязанская область, Россия", en: "Ryazan region, Russia" },
+    slug: "djursholm",
+    title: "Серый Гранит",
+    place: { ru: "Стокгольм, Швеция", en: "Stockholm, Sweden" },
     category: "private",
-    image: img("3437948834"),
+    image: "/images/projects/djursholm/cover.webp",
     specs: {
       area: { ru: "6 ГА", en: "6 ha" },
       year: "2023",
-      location: { ru: "Рязанская область", en: "Ryazan region" },
+      location: { ru: "Стокгольм, Швеция", en: "Stockholm, Sweden" },
       status: "realized",
     },
     description: {
@@ -60,15 +60,15 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "sylt",
-    title: "SYLT",
-    place: { ru: "Тверская область, Россия", en: "Tver region, Russia" },
+    slug: "sollentuna",
+    title: "Терракота и Вода",
+    place: { ru: "Соллентуна, Швеция", en: "Sollentuna, Sweden" },
     category: "private",
-    image: img("1605341651"),
+    image: "/images/projects/sollentuna/cover.webp",
     specs: {
       area: { ru: "1.2 ГА", en: "1.2 ha" },
       year: "2022",
-      location: { ru: "Тверская область", en: "Tver region" },
+      location: { ru: "Соллентуна, Швеция", en: "Sollentuna, Sweden" },
       status: "realized",
     },
     description: {
@@ -79,18 +79,18 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "mauer",
-    title: "MAUER",
+    slug: "gustavsberg",
+    title: "Тёмный Сланец",
     place: {
-      ru: "Ленинградская область, Россия",
-      en: "Leningrad region, Russia",
+      ru: "Густавсберг, Швеция",
+      en: "Gustavsberg, Sweden",
     },
     category: "private",
-    image: img("3651842918"),
+    image: "/images/projects/gustavsberg/cover.webp",
     specs: {
       area: { ru: "0.8 ГА", en: "0.8 ha" },
       year: "2021",
-      location: { ru: "Ленинградская область", en: "Leningrad region" },
+      location: { ru: "Густавсберг, Швеция", en: "Gustavsberg, Sweden" },
       status: "realized",
     },
     description: {
@@ -101,18 +101,18 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "ferrum",
-    title: "FERRUM",
+    slug: "lidingo",
+    title: "Гранитный Булыжник",
     place: {
-      ru: "Московская область, Россия",
-      en: "Moscow region, Russia",
+      ru: "Лидингё, Швеция",
+      en: "Lidingö, Sweden",
     },
     category: "private",
-    image: img("3697881396"),
+    image: "/images/projects/lidingo/cover.webp",
     specs: {
       area: { ru: "1.5 ГА", en: "1.5 ha" },
       year: "2020",
-      location: { ru: "Московская область", en: "Moscow region" },
+      location: { ru: "Лидингё, Швеция", en: "Lidingö, Sweden" },
       status: "realized",
     },
     description: {
@@ -123,18 +123,18 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "zamedlenie",
-    title: "ЗАМЕДЛЕНИЕ",
+    slug: "buxus",
+    title: "BUXUS",
     place: {
-      ru: "Московская область, Россия",
-      en: "Moscow region, Russia",
+      ru: "Джурсхольм, Швеция",
+      en: "Djursholm, Sweden",
     },
     category: "private",
-    image: img("650051902"),
+    image: "/images/projects/djur2/cover.webp",
     specs: {
       area: { ru: "2 ГА", en: "2 ha" },
       year: "2022",
-      location: { ru: "Московская область", en: "Moscow region" },
+      location: { ru: "Джурсхольм, Швеция", en: "Djursholm, Sweden" },
       status: "realized",
     },
     description: {

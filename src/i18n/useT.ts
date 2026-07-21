@@ -32,8 +32,8 @@ export const strings = {
     en: "Garden as a state",
   },
   "hero.lede": {
-    ru: "Мы — ландшафтная студия полного цикла. Создаём скандинавские сады в любых климатических зонах: от Калининграда до Владивостока и Сочи, а также за пределами России.",
-    en: "We are a full-cycle landscape studio. We create Scandinavian gardens in any climate zone — from Kaliningrad to Vladivostok and Sochi, and beyond Russia.",
+    ru: "Создаём скандинавские сады. Специализируемся на Московской области.",
+    en: "We create Scandinavian gardens. Specialised in the Moscow Region.",
   },
   "hero.stat1.value": { ru: "с 2014", en: "since 2014" },
   "hero.stat1.label": { ru: "года работаем", en: "in the craft" },

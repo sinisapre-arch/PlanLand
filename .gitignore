@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Raw source images — drop originals here, optimized WebPs live in projects/<slug>/
+public/images/Project Images/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
