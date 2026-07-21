@@ -23,7 +23,9 @@ export default function PageHeader({
   children,
 }: Props) {
   return (
-    <section className={`px-4 pb-10 pt-32 sm:px-6 sm:pt-36 lg:px-10 lg:pb-14 lg:pt-44 ${TONES[tone]}`}>
+    <section
+      className={`px-4 pb-10 pt-32 sm:px-6 sm:pt-36 lg:px-10 lg:pb-14 lg:pt-44 ${TONES[tone]}`}
+    >
       <div className="mx-auto max-w-[1760px]">
         {eyebrow && (
           <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.28em] opacity-60">

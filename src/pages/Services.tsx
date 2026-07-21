@@ -1,7 +1,7 @@
-import { assets } from "../data/assets";
-import { services } from "../data/content";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
+import { assets } from "../data/assets";
+import { services } from "../data/content";
 import { useLang } from "../i18n/LangContext";
 import { useT } from "../i18n/useT";
 
@@ -36,7 +36,9 @@ export default function Services() {
                   <h3 className="font-expanded text-2xl font-black uppercase leading-tight tracking-[-0.03em] sm:text-3xl">
                     {title}
                   </h3>
-                  <p className="text-base leading-relaxed text-graphite/80">{body}</p>
+                  <p className="text-base leading-relaxed text-graphite/80">
+                    {body}
+                  </p>
                 </div>
               );
             })}

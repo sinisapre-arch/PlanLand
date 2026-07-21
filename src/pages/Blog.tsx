@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { blogPosts } from "../data/content";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
+import { blogPosts } from "../data/content";
 import { useLang } from "../i18n/LangContext";
 import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";
@@ -50,7 +50,9 @@ export default function Blog() {
                   <h3 className="mt-3 font-expanded text-2xl font-black uppercase leading-tight tracking-[-0.03em]">
                     {title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-graphite/75">{excerpt}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-graphite/75">
+                    {excerpt}
+                  </p>
                 </div>
               </Link>
             );

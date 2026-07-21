@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { useLang } from "../i18n/LangContext";
+import { type StringKey, useT } from "../i18n/useT";
 import {
-  submitToTelegram,
-  validateField,
   type ProjectType,
   type TelegramSubmitResult,
+  submitToTelegram,
+  validateField,
 } from "./telegram";
-import { useLang } from "../i18n/LangContext";
-import { useT, type StringKey } from "../i18n/useT";
 
 export type FormStatus =
   | { kind: "idle" }
@@ -51,11 +51,17 @@ export function useTelegramForm(source: ProjectType) {
     }
     const vContact = validateField(values.contact, "contact");
     if (!vContact.ok) {
-      return { ok: false, messageKey: mapFieldError("contact", vContact.reason) };
+      return {
+        ok: false,
+        messageKey: mapFieldError("contact", vContact.reason),
+      };
     }
     const vMessage = validateField(values.message, "message");
     if (!vMessage.ok) {
-      return { ok: false, messageKey: mapFieldError("message", vMessage.reason) };
+      return {
+        ok: false,
+        messageKey: mapFieldError("message", vMessage.reason),
+      };
     }
     return { ok: true };
   };

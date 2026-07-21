@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { assets } from "../data/assets";
-import { principles } from "../data/content";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
+import { assets } from "../data/assets";
+import { principles } from "../data/content";
 import { useLang } from "../i18n/LangContext";
 import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";

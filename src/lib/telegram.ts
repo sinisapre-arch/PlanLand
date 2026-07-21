@@ -14,7 +14,8 @@
  *   → 4xx/5xx { error: string } on failure
  */
 
-export const TELEGRAM_WORKER_URL = "https://mscw-bureau-bot.sinisapre.workers.dev";
+export const TELEGRAM_WORKER_URL =
+  "https://mscw-bureau-bot.sinisapre.workers.dev";
 
 export type ProjectType =
   | "landscape"
@@ -71,7 +72,10 @@ export async function submitToTelegram(
 ): Promise<TelegramSubmitResult> {
   const safeName = data.name.substring(0, FIELD_LIMITS.name.max);
   const safeContact = data.contact.substring(0, FIELD_LIMITS.contact.max);
-  const safeMessage = (data.message ?? "").substring(0, FIELD_LIMITS.message.max);
+  const safeMessage = (data.message ?? "").substring(
+    0,
+    FIELD_LIMITS.message.max,
+  );
 
   // Build the body the worker expects. The reference format prefixes lines
   // with emoji markers so the Telegram message reads cleanly.
@@ -96,7 +100,9 @@ export async function submitToTelegram(
       return { ok: true };
     }
 
-    const errBody = (await response.json().catch(() => ({}))) as { error?: string };
+    const errBody = (await response.json().catch(() => ({}))) as {
+      error?: string;
+    };
     return { ok: false, error: errBody.error ?? `HTTP ${response.status}` };
   } catch (err) {
     // Network error, CORS, worker unreachable, etc.

@@ -1,11 +1,11 @@
-import { contactInfo } from "../data/assets";
+import FormStatus from "../components/FormStatus";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
-import FormStatus from "../components/FormStatus";
-import { useTelegramForm } from "../lib/useTelegramForm";
-import { FIELD_LIMITS } from "../lib/telegram";
+import { contactInfo } from "../data/assets";
 import { useLang } from "../i18n/LangContext";
 import { useT } from "../i18n/useT";
+import { FIELD_LIMITS } from "../lib/telegram";
+import { useTelegramForm } from "../lib/useTelegramForm";
 
 export default function Contacts() {
   const t = useT();
@@ -83,8 +83,14 @@ export default function Contacts() {
             >
               {isSending ? t("form.sending") : t("form.submit")}
             </button>
-            <FormStatus status={form.status} text={form.statusText} tone="dark" />
-            <p className="text-[10px] leading-relaxed text-graphite/50">{t("cta.consent")}</p>
+            <FormStatus
+              status={form.status}
+              text={form.statusText}
+              tone="dark"
+            />
+            <p className="text-[10px] leading-relaxed text-graphite/50">
+              {t("cta.consent")}
+            </p>
           </form>
 
           {/* Offices */}

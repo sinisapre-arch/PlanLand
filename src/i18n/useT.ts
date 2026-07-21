@@ -151,7 +151,10 @@ export const strings = {
   },
 
   // ---- Footer ----
-  "footer.msk": { ru: "Москва, ул. Саврасова, д. 7, помещ. 2", en: "Moscow, Savrasova st., 7, prem. 2" },
+  "footer.msk": {
+    ru: "Москва, ул. Саврасова, д. 7, помещ. 2",
+    en: "Moscow, Savrasova st., 7, prem. 2",
+  },
   "footer.spb": {
     ru: "Санкт-Петербург, Большой Сампсониевский пр., 28 корп. 2, БЦ Mezon Plaza, офис 643",
     en: "St. Petersburg, Bolshoy Sampsonievsky pr., 28 bldg. 2, Mezon Plaza BC, office 643",
@@ -234,7 +237,10 @@ export const strings = {
     en: "Leave a request — the manager will contact you within a business day and propose a time for the first meeting.",
   },
   "contacts.msk": { ru: "Офис в Москве", en: "Moscow office" },
-  "contacts.spb": { ru: "Офис в Санкт-Петербурге", en: "St. Petersburg office" },
+  "contacts.spb": {
+    ru: "Офис в Санкт-Петербурге",
+    en: "St. Petersburg office",
+  },
 
   // ---- Blog ----
   "blog.eyebrow": { ru: "Журнал", en: "Journal" },

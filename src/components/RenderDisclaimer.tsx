@@ -6,7 +6,9 @@ import { useT } from "../i18n/useT";
  * planting shown is illustrative only. Originally requested for the Nadya
  * landscaping project page; reusable across any project detail.
  */
-export default function RenderDisclaimer({ className = "" }: { className?: string }) {
+export default function RenderDisclaimer({
+  className = "",
+}: { className?: string }) {
   const t = useT();
   const { contentLocale } = useLang();
   return (

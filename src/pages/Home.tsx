@@ -1,21 +1,24 @@
 import { Link } from "react-router-dom";
-import { assets } from "../data/assets";
-import { featuredProjects, projects } from "../data/projects";
-import { principles } from "../data/content";
+import FormStatus from "../components/FormStatus";
 import ProjectCard from "../components/ProjectCard";
 import Seo from "../components/Seo";
-import FormStatus from "../components/FormStatus";
-import { useTelegramForm } from "../lib/useTelegramForm";
-import { FIELD_LIMITS } from "../lib/telegram";
+import { assets } from "../data/assets";
+import { principles } from "../data/content";
+import { featuredProjects, projects } from "../data/projects";
 import { useLang } from "../i18n/LangContext";
 import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";
+import { FIELD_LIMITS } from "../lib/telegram";
+import { useTelegramForm } from "../lib/useTelegramForm";
 
 function Hero() {
   const t = useT();
   const lp = useLocalePath();
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden bg-cream pt-24 text-graphite">
+    <section
+      id="top"
+      className="relative min-h-screen overflow-hidden bg-cream pt-24 text-graphite"
+    >
       <div
         className="absolute inset-0 opacity-[0.18] mix-blend-multiply"
         style={{
@@ -31,11 +34,13 @@ function Hero() {
             {t("hero.eyebrow")}
           </p>
           <h1 className="font-expanded text-[18vw] font-black uppercase leading-[0.78] tracking-[-0.075em] sm:text-[13vw] lg:text-[9.4vw]">
-            {t("hero.title").split(" ").map((word, i) => (
-              <span key={`${word}-${i}`} className="block">
-                {word}
-              </span>
-            ))}
+            {t("hero.title")
+              .split(" ")
+              .map((word, i) => (
+                <span key={`${word}-${i}`} className="block">
+                  {word}
+                </span>
+              ))}
           </h1>
         </div>
         <div className="flex flex-col justify-end gap-10 lg:items-end">
@@ -205,7 +210,10 @@ function PortfolioPreview() {
   // First 12 projects on the home grid.
   const preview = projects.slice(0, 12);
   return (
-    <section id="portfolio" className="bg-cream px-4 py-20 text-graphite sm:px-6 lg:px-10 lg:py-28">
+    <section
+      id="portfolio"
+      className="bg-cream px-4 py-20 text-graphite sm:px-6 lg:px-10 lg:py-28"
+    >
       <div className="mx-auto max-w-[1760px]">
         <div className="mb-10 flex items-end justify-between gap-6 border-b border-graphite/25 pb-5">
           <h2 className="font-expanded text-6xl font-black uppercase leading-none tracking-[-0.07em] sm:text-8xl lg:text-9xl">
@@ -283,8 +291,14 @@ function CatalogCta() {
             {isSending ? t("form.sending") : t("cta.submit")}
             <img src={assets.download} alt="" className="h-5 w-5" />
           </button>
-          <FormStatus status={form.status} text={form.statusText} tone="light" />
-          <p className="text-[10px] leading-relaxed text-cream/50">{t("cta.consent")}</p>
+          <FormStatus
+            status={form.status}
+            text={form.statusText}
+            tone="light"
+          />
+          <p className="text-[10px] leading-relaxed text-cream/50">
+            {t("cta.consent")}
+          </p>
         </form>
       </div>
     </section>
@@ -295,7 +309,10 @@ export default function Home() {
   const t = useT();
   return (
     <>
-      <Seo title="PlanoLand — Ландшафтная студия полного цикла" description={t("hero.lede")} />
+      <Seo
+        title="PlanoLand — Ландшафтная студия полного цикла"
+        description={t("hero.lede")}
+      />
       <Hero />
       <FeaturedProjects />
       <Studio />

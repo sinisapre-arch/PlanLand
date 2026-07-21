@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { useLang } from "../i18n/LangContext";
 import { useT } from "../i18n/useT";
-import Header from "./Header";
 import Footer from "./Footer";
+import Header from "./Header";
 
 function CookieAndChat() {
   const t = useT();

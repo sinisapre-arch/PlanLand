@@ -1,6 +1,6 @@
-import { team } from "../data/content";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
+import { team } from "../data/content";
 import { useLang } from "../i18n/LangContext";
 import { useT } from "../i18n/useT";
 
@@ -24,7 +24,10 @@ export default function Team() {
             const role = member.role[contentLocale] ?? member.role.ru;
             const bio = member.bio[contentLocale] ?? member.bio.ru;
             return (
-              <article key={member.name} className="overflow-hidden bg-graphite/5">
+              <article
+                key={member.name}
+                className="overflow-hidden bg-graphite/5"
+              >
                 <div className="relative aspect-[4/5] w-full overflow-hidden bg-graphite">
                   <img
                     src={member.photo}
@@ -40,7 +43,9 @@ export default function Team() {
                   <p className="mt-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-graphite/65">
                     {role}
                   </p>
-                  <p className="mt-5 text-base leading-relaxed text-graphite/80">{bio}</p>
+                  <p className="mt-5 text-base leading-relaxed text-graphite/80">
+                    {bio}
+                  </p>
                 </div>
               </article>
             );

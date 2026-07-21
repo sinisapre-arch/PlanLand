@@ -1,8 +1,8 @@
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
 import { useLang } from "../i18n/LangContext";
-import { useT, type StringKey } from "../i18n/useT";
+import { type StringKey, useT } from "../i18n/useT";
 
 // TODO(rebrand): domain + legal entity below are placeholders for the old
 // lburo.ru / ООО «Л-Бюро» values. Replace with PlanoLand's real domain and
@@ -83,10 +83,15 @@ const docs: LegalDoc[] = [
 ];
 
 /** Map the `/op/` slug from the reference site to the user-agreement doc. */
-function resolveKey(slug: string | undefined, pathname: string): LegalDoc["key"] {
+function resolveKey(
+  slug: string | undefined,
+  pathname: string,
+): LegalDoc["key"] {
   if (slug === "op" || pathname.endsWith("/op")) return "agree";
-  if (slug === "policy-yandex" || pathname.endsWith("/policy-yandex")) return "policy-yandex";
-  if (slug === "documents" || pathname.endsWith("/documents")) return "documents";
+  if (slug === "policy-yandex" || pathname.endsWith("/policy-yandex"))
+    return "policy-yandex";
+  if (slug === "documents" || pathname.endsWith("/documents"))
+    return "documents";
   return "policy";
 }
 
@@ -104,12 +109,19 @@ export default function Legal() {
   return (
     <>
       <Seo title={t(doc.titleKey)} description={paragraphs[0]} />
-      <PageHeader eyebrow={t("legal.updated")} title={t(doc.titleKey)} tone="cream" />
+      <PageHeader
+        eyebrow={t("legal.updated")}
+        title={t(doc.titleKey)}
+        tone="cream"
+      />
 
       <section className="bg-cream px-4 pb-20 text-graphite sm:px-6 lg:px-10">
         <div className="mx-auto max-w-3xl">
           <p className="mb-10 text-[11px] font-semibold uppercase tracking-[0.2em] text-graphite/55">
-            {t("legal.updated")}: {new Date(doc.updated).toLocaleDateString(lang === "en" ? "en-GB" : "ru-RU")}
+            {t("legal.updated")}:{" "}
+            {new Date(doc.updated).toLocaleDateString(
+              lang === "en" ? "en-GB" : "ru-RU",
+            )}
           </p>
           <div className="space-y-6 text-base leading-relaxed text-graphite/80 sm:text-lg">
             {paragraphs.map((p, i) => (

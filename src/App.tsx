@@ -1,15 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import Blog from "./pages/Blog";
+import Contacts from "./pages/Contacts";
 import Home from "./pages/Home";
+import Legal from "./pages/Legal";
+import NotFound from "./pages/NotFound";
 import Portfolio from "./pages/Portfolio";
 import ProjectDetail from "./pages/ProjectDetail";
 import ScandinavianGarden from "./pages/ScandinavianGarden";
 import Services from "./pages/Services";
 import Team from "./pages/Team";
-import Contacts from "./pages/Contacts";
-import Blog from "./pages/Blog";
-import Legal from "./pages/Legal";
-import NotFound from "./pages/NotFound";
 
 /**
  * Shared route tree, used once per locale. Russian is un-prefixed

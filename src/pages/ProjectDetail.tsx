@@ -1,12 +1,12 @@
 import { Link, useParams } from "react-router-dom";
-import { getNextProject, getProjectBySlug } from "../data/projects";
 import PageHeader from "../components/PageHeader";
 import RenderDisclaimer from "../components/RenderDisclaimer";
 import Seo from "../components/Seo";
-import NotFound from "./NotFound";
+import { getNextProject, getProjectBySlug } from "../data/projects";
 import { useLang } from "../i18n/LangContext";
 import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";
+import NotFound from "./NotFound";
 
 export default function ProjectDetail() {
   const { slug = "" } = useParams();
@@ -18,9 +18,11 @@ export default function ProjectDetail() {
   if (!project) return <NotFound />;
 
   const place = project.place[contentLocale] ?? project.place.ru;
-  const description = project.description[contentLocale] ?? project.description.ru;
+  const description =
+    project.description[contentLocale] ?? project.description.ru;
   const area = project.specs.area[contentLocale] ?? project.specs.area.ru;
-  const location = project.specs.location[contentLocale] ?? project.specs.location.ru;
+  const location =
+    project.specs.location[contentLocale] ?? project.specs.location.ru;
   const next = getNextProject(project.slug);
   const nextPlace = next.place[contentLocale] ?? next.place.ru;
 
@@ -42,7 +44,10 @@ export default function ProjectDetail() {
 
   return (
     <>
-      <Seo title={`${project.title} — ${t("nav.portfolio")}`} description={description} />
+      <Seo
+        title={`${project.title} — ${t("nav.portfolio")}`}
+        description={description}
+      />
 
       {/* Hero */}
       <section className="relative h-[70vh] min-h-[460px] w-full overflow-hidden bg-graphite text-cream">

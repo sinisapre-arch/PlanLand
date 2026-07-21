@@ -1,9 +1,9 @@
 import { useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
-import { projects, type ProjectCategory } from "../data/projects";
-import ProjectCard from "../components/ProjectCard";
 import PageHeader from "../components/PageHeader";
+import ProjectCard from "../components/ProjectCard";
 import Seo from "../components/Seo";
+import { type ProjectCategory, projects } from "../data/projects";
 import { useLang } from "../i18n/LangContext";
 import { useT } from "../i18n/useT";
 
@@ -24,7 +24,10 @@ export default function Portfolio() {
     : "all";
 
   const visible = useMemo(
-    () => (active === "all" ? projects : projects.filter((p) => p.category === active)),
+    () =>
+      active === "all"
+        ? projects
+        : projects.filter((p) => p.category === active),
     [active],
   );
 
@@ -54,7 +57,11 @@ export default function Portfolio() {
             : "Портфолио проектов ландшафтной студии PlanoLand в Москве и Санкт-Петербурге."
         }
       />
-      <PageHeader eyebrow={t("nav.portfolio")} title={t("portfolio.title")} tone="cream" />
+      <PageHeader
+        eyebrow={t("nav.portfolio")}
+        title={t("portfolio.title")}
+        tone="cream"
+      />
 
       <section className="bg-cream px-4 pb-20 text-graphite sm:px-6 lg:px-10">
         <div className="mx-auto max-w-[1760px]">

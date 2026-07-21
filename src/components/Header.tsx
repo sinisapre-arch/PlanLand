@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { contactInfo } from "../data/assets";
-import { useLang, type Locale } from "../i18n/LangContext";
+import { type Locale, useLang } from "../i18n/LangContext";
 import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";
 import type { StringKey } from "../i18n/useT";
@@ -28,7 +28,9 @@ function LanguageSwitcher() {
           type="button"
           onClick={() => setLocale(code)}
           className={`uppercase transition ${
-            code === locale ? "text-graphite" : "text-graphite/35 hover:text-graphite/60"
+            code === locale
+              ? "text-graphite"
+              : "text-graphite/35 hover:text-graphite/60"
           }`}
         >
           {code}
@@ -47,7 +49,10 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-stone/20 bg-cream/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1760px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10">
         <div className="hidden items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-graphite/70 lg:flex">
-          <Link className="border-b border-graphite pb-1" to={lp("/portfolio?category=private")}>
+          <Link
+            className="border-b border-graphite pb-1"
+            to={lp("/portfolio?category=private")}
+          >
             {t("nav.private")}
           </Link>
           <Link className="pb-1" to={lp("/portfolio?category=public")}>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
+import type { Project } from "../data/projects";
 import { useLang } from "../i18n/LangContext";
 import { useLocalePath } from "../i18n/routes";
-import type { Project } from "../data/projects";
 
 type Props = {
   project: Project;
@@ -10,7 +10,11 @@ type Props = {
   index?: number;
 };
 
-export default function ProjectCard({ project, feature = false, index = 0 }: Props) {
+export default function ProjectCard({
+  project,
+  feature = false,
+  index = 0,
+}: Props) {
   const lp = useLocalePath();
   const { contentLocale } = useLang();
   const label = project.label?.[contentLocale] ?? project.label?.ru;
