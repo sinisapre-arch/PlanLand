@@ -191,27 +191,31 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "hugel",
-    title: "HUGEL",
-    place: {
-      ru: "Медное озеро, Ленинградская область",
-      en: "Mednoye lake, Leningrad region",
+      slug: "hacienda",
+      title: "HACIENDA",
+      place: {
+        ru: "Медное озеро, Ленинградская область",
+        en: "Mednoye lake, Leningrad region",
+      },
+      category: "private",
+      image: "/images/projects/hacienda/cover.webp",
+      specs: {
+        area: { ru: "0.6 ГА", en: "0.6 ha" },
+        year: "2023",
+        location: { ru: "Медное озеро", en: "Mednoye lake" },
+        status: "realized",
+      },
+      description: {
+        ru: "Участок на берегу Медного озера. Холм организует видовые раскрытия и скрывает служебные зоны, формируя последовательность кадров по мере движения к воде.",
+        en: "A plot on the shore of Mednoye lake. A hill organizes framed views and conceals utility zones, building a sequence of shots as you move toward the water.",
+      },
+      gallery: [
+        "/images/projects/hacienda/gallery/01.webp",
+        "/images/projects/hacienda/gallery/02.webp",
+        "/images/projects/hacienda/gallery/03.webp",
+      ],
+      featured: true,
     },
-    category: "private",
-    image: img("4282744907"),
-    specs: {
-      area: { ru: "0.6 ГА", en: "0.6 ha" },
-      year: "2023",
-      location: { ru: "Медное озеро", en: "Mednoye lake" },
-      status: "realized",
-    },
-    description: {
-      ru: "Участок на берегу Медного озера. Холм (Hugel) организует видовые раскрытия и скрывает служебные зоны, формируя последовательность кадров по мере движения к воде.",
-      en: "A plot on the shore of Mednoye lake. A hill (Hugel) organizes framed views and conceals utility zones, building a sequence of shots as you move toward the water.",
-    },
-    gallery: [img("2524636883")],
-    featured: true,
-  },
   {
     slug: "haus-im-wald",
     title: "HAUS IM WALD",
