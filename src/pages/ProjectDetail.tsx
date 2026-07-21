@@ -97,20 +97,26 @@ export default function ProjectDetail() {
         </div>
       </section>
 
-      {/* Gallery */}
+      {/* Gallery — masonry layout, each image keeps its natural aspect ratio. */}
       {project.gallery && project.gallery.length > 0 && (
         <section className="bg-graphite px-4 py-16 text-cream sm:px-6 lg:px-10 lg:py-20">
           <div className="mx-auto max-w-[1760px]">
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div
+              className="gallery-masonry"
+              style={{
+                columnGap: "0.75rem",
+                columnCount: 1,
+              }}
+            >
               {[project.image, ...(project.gallery ?? [])].map((src, i) => (
-                <div key={`${src}-${i}`} className="overflow-hidden bg-black">
-                  <img
-                    src={src}
-                    alt={`${project.title} — ${i + 1}`}
-                    loading="lazy"
-                    className="aspect-[4/3] w-full object-cover opacity-90"
-                  />
-                </div>
+                <img
+                  key={`${src}-${i}`}
+                  src={src}
+                  alt={`${project.title} — ${i + 1}`}
+                  loading="lazy"
+                  className="mb-3 block w-full opacity-90 transition duration-700 hover:opacity-100"
+                  style={{ breakInside: "avoid" }}
+                />
               ))}
             </div>
             <RenderDisclaimer className="mt-8 text-cream/55" />
