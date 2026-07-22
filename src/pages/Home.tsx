@@ -34,15 +34,6 @@ function Hero() {
           <p className="mb-8 max-w-xl text-[11px] font-semibold uppercase leading-relaxed tracking-[0.26em] text-graphite/70">
             {t("hero.eyebrow")}
           </p>
-          <h1 className="font-expanded text-[18vw] font-black uppercase leading-[0.78] tracking-[-0.075em] sm:text-[13vw] lg:text-[9.4vw]">
-            {t("hero.title")
-              .split(" ")
-              .map((word, i) => (
-                <span key={`${word}-${i}`} className="block">
-                  {word}
-                </span>
-              ))}
-          </h1>
         </div>
         <div className="flex flex-col justify-end gap-10 lg:items-end">
           <p className="max-w-xl text-base leading-relaxed text-graphite/85 sm:text-xl lg:text-2xl lg:leading-snug">
