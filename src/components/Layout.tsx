@@ -1,23 +1,25 @@
 import { useEffect, useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { useLang } from "../i18n/LangContext";
+import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";
 import Footer from "./Footer";
 import Header from "./Header";
 
 function CookieAndChat() {
   const t = useT();
+  const lp = useLocalePath();
   const [accepted, setAccepted] = useState(false);
 
   if (accepted) {
     return (
-      <button
-        type="button"
+      <Link
+        to={lp("/contacts")}
         className="fixed bottom-24 right-4 z-40 grid h-16 w-16 place-items-center rounded-full bg-graphite text-[10px] font-black uppercase tracking-[0.18em] text-cream shadow-2xl sm:bottom-8 sm:right-8"
         aria-label={t("chat.label")}
       >
         {t("chat.label")}
-      </button>
+      </Link>
     );
   }
 
@@ -37,13 +39,13 @@ function CookieAndChat() {
           </button>
         </div>
       </div>
-      <button
-        type="button"
+      <Link
+        to={lp("/contacts")}
         className="fixed bottom-24 right-4 z-40 grid h-16 w-16 place-items-center rounded-full bg-graphite text-[10px] font-black uppercase tracking-[0.18em] text-cream shadow-2xl sm:bottom-8 sm:right-8"
         aria-label={t("chat.label")}
       >
         {t("chat.label")}
-      </button>
+      </Link>
     </>
   );
 }
