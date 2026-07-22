@@ -24,35 +24,37 @@ export const strings = {
 
   // ---- Hero ----
   "hero.eyebrow": {
-    ru: "Студия ландшафтного дизайна PlanoLand. Создаём скандинавские сады полного цикла.",
-    en: "PlanoLand landscape design studio. We create full-cycle Scandinavian gardens.",
+    ru: "Скандинавский дизайн, построенный своими руками",
+    en: "Scandinavian design, built by hand",
   },
   "hero.title": {
-    ru: "Сад как состояние",
-    en: "Garden as a state",
+    ru: "От первого эскиза до последнего камня — одна команда видит дело до конца",
+    en: "From the first sketch to the last stone, one team sees it through",
   },
   "hero.lede": {
-    ru: "Создаём скандинавские сады. Специализируемся на Московской области.",
-    en: "We create Scandinavian gardens. Specialised in the Moscow Region.",
+    ru: "Мы проектируем ваш сад и строим его — одни и те же руки, от начала до конца. Пятнадцать лет скандинавского ландшафтного мастерства теперь работают в Подмосковье.",
+    en: "We design your garden and we build it — the same hands, start to finish. Fifteen years of Scandinavian landscape craft, now at work in the Moscow region.",
   },
-  "hero.stat1.value": { ru: "с 2014", en: "since 2014" },
-  "hero.stat1.label": { ru: "года работаем", en: "in the craft" },
+  "hero.stat1.value": { ru: "15 лет", en: "15 years" },
+  "hero.stat1.label": { ru: "скандинавский дизайн и стройка", en: "Scandinavian design & construction" },
   "hero.stat2.value": { ru: "300+", en: "300+" },
-  "hero.stat2.label": { ru: "садов в портфолио", en: "gardens in portfolio" },
-  "hero.stat3.value": { ru: "7", en: "7" },
-  "hero.stat3.label": { ru: "стран мира", en: "countries worldwide" },
+  "hero.stat2.label": { ru: "садов спроектировано и построено", en: "gardens designed and built" },
+  "hero.stat3.value": { ru: "1 команда", en: "1 team" },
+  "hero.stat3.label": { ru: "дизайн через стройку, от начала до конца", en: "design through construction, start to finish" },
 
   // ---- Featured projects ----
   "featured.label": { ru: "проект", en: "project" },
+  "featured.prev": { ru: "Предыдущий проект", en: "Previous project" },
+  "featured.next": { ru: "Следующий проект", en: "Next project" },
 
   // ---- Studio ----
   "studio.eyebrow": {
-    ru: "Студия ландшафтного дизайна PlanoLand",
+    ru: "PlanoLand — студия ландшафтного дизайна",
     en: "PlanoLand landscape design studio",
   },
   "studio.title": {
-    ru: "Создаём среду, где рождаются новые сценарии жизни",
-    en: "We create spaces where new life scenarios are born",
+    ru: "Создаём среду, где жизнь обретает новые сценарии",
+    en: "We create spaces where life takes on new scenarios",
   },
   "studio.caption": {
     ru: "Синиша Предраговић и Лыхно Георгий Александрович — основатели PlanoLand",
@@ -155,13 +157,9 @@ export const strings = {
     ru: "Москва, ул. Саврасова, д. 7, помещ. 2",
     en: "Moscow, Savrasova st., 7, prem. 2",
   },
-  "footer.spb": {
-    ru: "Санкт-Петербург, Большой Сампсониевский пр., 28 корп. 2, БЦ Mezon Plaza, офис 643",
-    en: "St. Petersburg, Bolshoy Sampsonievsky pr., 28 bldg. 2, Mezon Plaza BC, office 643",
-  },
   "footer.rights": {
-    ru: "2020–2026. Материалы сайта могут быть использованы только с разрешения PlanoLand.",
-    en: "2020–2026. Site materials may be used only with permission of PlanoLand.",
+    ru: "2026. Материалы сайта могут быть использованы только с разрешения PlanoLand.",
+    en: "2026. Site materials may be used only with permission of PlanoLand.",
   },
   "footer.policy": {
     ru: "Политика обработки персональных данных",
@@ -202,18 +200,18 @@ export const strings = {
   },
 
   // ---- Services ----
-  "services.eyebrow": {
-    ru: "Услуги студии",
-    en: "Studio services",
-  },
-  "services.title": {
-    ru: "Полный цикл создания сада",
-    en: "A full cycle of garden making",
-  },
-  "services.lede": {
-    ru: "Ведём проект от первой встречи до реализации и ухода. Каждая стадия закреплена за специалистом и сопровождается договором.",
-    en: "We carry the project from the first meeting to implementation and maintenance. Each stage has a dedicated specialist and a contract.",
-  },
+    "services.eyebrow": {
+      ru: "Услуги студии",
+      en: "Studio services",
+    },
+    "services.title": {
+      ru: "Полный цикл создания сада",
+      en: "A full cycle of garden making",
+    },
+    "services.lede": {
+      ru: "Ведём проект от первой встречи до реализации и ухода. Дизайн и замеры — у нас внутри, поэтому дешевле, чем нанимать их отдельно. Сад можно строить поэтадно, по сезонам — не обязательно всё сразу.",
+      en: "We carry the project from the first meeting to implementation and maintenance. Design and surveying are in-house, so it costs less than hiring them separately. The garden can be built in phases across seasons — you don't have to build everything at once.",
+    },
 
   // ---- Team ----
   "team.eyebrow": { ru: "Команда PlanoLand", en: "The PlanoLand team" },
@@ -222,8 +220,8 @@ export const strings = {
     en: "The people who make gardens",
   },
   "team.lede": {
-    ru: "Архитекторы, инженеры, дендрологи и менеджеры проектов — все работают в студии штатно и сопровождают каждый сад лично.",
-    en: "Architects, engineers, dendrologists and project managers — all in-house, each personally guiding every garden.",
+    ru: "Синиша — дизайнер и строитель с 15-летним опытом в Швеции. Георгий — основатель Planodom, строит дома под ключ за 60 дней. Вместе — полный цикл: дом и сад.",
+    en: "Sinisa — designer & builder with 15 years in Sweden. Georgy — founder of Planodom, builds turnkey homes in 60 days. Together — full cycle: house and garden.",
   },
 
   // ---- Contacts ----
@@ -236,11 +234,7 @@ export const strings = {
     ru: "Оставьте заявку — менеджер свяжется в течение рабочего дня и предложит время для первой встречи.",
     en: "Leave a request — the manager will contact you within a business day and propose a time for the first meeting.",
   },
-  "contacts.msk": { ru: "Офис в Москве", en: "Moscow office" },
-  "contacts.spb": {
-    ru: "Офис в Санкт-Петербурге",
-    en: "St. Petersburg office",
-  },
+  "contacts.msk": { ru: "Офис в Подмосковье", en: "Moscow region office" },
 
   // ---- Blog ----
   "blog.eyebrow": { ru: "Журнал", en: "Journal" },

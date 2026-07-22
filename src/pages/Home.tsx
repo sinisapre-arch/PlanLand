@@ -1,3 +1,4 @@
+import { useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import FormStatus from "../components/FormStatus";
 import ProjectCard from "../components/ProjectCard";
@@ -75,35 +76,106 @@ function FeaturedProjects() {
   const t = useT();
   const lp = useLocalePath();
   const { contentLocale } = useLang();
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  // Scroll the carousel by roughly one card. Direction: -1 = previous, +1 = next.
+  const scrollByCard = useCallback((direction: 1 | -1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const firstCard = el.querySelector<HTMLElement>("[data-card]");
+    if (!firstCard) {
+      el.scrollBy({ left: direction * el.clientWidth * 0.8, behavior: "smooth" });
+      return;
+    }
+    // One card width + the gap between cards.
+    const step = firstCard.offsetWidth + 12; // 12 = gap-3
+    el.scrollBy({ left: direction * step, behavior: "smooth" });
+  }, []);
+
+  // Arrow-key support when the carousel has focus.
+  const onKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      scrollByCard(1);
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      scrollByCard(-1);
+    }
+  };
+
   return (
     <section className="bg-graphite py-6 text-cream sm:py-10">
-      <div className="no-scrollbar flex snap-x gap-3 overflow-x-auto px-4 sm:px-6 lg:px-10">
-        {featuredProjects.map((project, index) => (
-          <Link
-            key={project.slug}
-            to={lp(`/portfolio/${project.slug}`)}
-            className="group relative h-[62vh] min-h-[480px] w-[78vw] max-w-[560px] shrink-0 snap-center overflow-hidden bg-black sm:w-[44vw] lg:w-[29vw]"
-          >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="h-full w-full object-cover opacity-85 transition duration-700 group-hover:scale-105 group-hover:opacity-100"
+      <div className="relative">
+        <div
+          ref={scrollerRef}
+          tabIndex={0}
+          onKeyDown={onKeyDown}
+          className="no-scrollbar flex snap-x gap-3 overflow-x-auto px-4 outline-none scroll-smooth sm:px-6 lg:px-10"
+          aria-label={t("nav.portfolio")}
+        >
+          {featuredProjects.map((project, index) => (
+            <Link
+              key={project.slug}
+              to={lp(`/portfolio/${project.slug}`)}
+              data-card
+              className="group relative h-[62vh] min-h-[480px] w-[78vw] max-w-[560px] shrink-0 snap-center overflow-hidden bg-black sm:w-[44vw] lg:w-[29vw]"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-cover opacity-85 transition duration-700 group-hover:scale-105 group-hover:opacity-100"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              <div className="absolute left-5 right-5 top-5 flex justify-between text-[10px] font-semibold uppercase tracking-[0.22em] text-cream/75">
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <span>{t("featured.label")}</span>
+              </div>
+              <div className="absolute inset-x-5 bottom-6">
+                <h2 className="font-expanded text-4xl font-black uppercase leading-none tracking-[-0.05em] sm:text-5xl">
+                  {project.title}
+                </h2>
+                <p className="mt-3 text-xs font-semibold uppercase tracking-[0.16em] text-cream/75">
+                  {project.place[contentLocale] ?? project.place.ru}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Prev / Next buttons — visible on >=640px (desktop), hidden on mobile
+            where native touch-swipe is more natural. */}
+        <button
+          type="button"
+          onClick={() => scrollByCard(-1)}
+          aria-label={t("featured.prev")}
+          className="carousel-arrow carousel-arrow-prev grid place-items-center rounded-full border border-cream/40 bg-graphite/60 text-cream backdrop-blur transition hover:border-cream hover:bg-graphite"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M15 18l-6-6 6-6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-            <div className="absolute left-5 right-5 top-5 flex justify-between text-[10px] font-semibold uppercase tracking-[0.22em] text-cream/75">
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <span>{t("featured.label")}</span>
-            </div>
-            <div className="absolute inset-x-5 bottom-6">
-              <h2 className="font-expanded text-4xl font-black uppercase leading-none tracking-[-0.05em] sm:text-5xl">
-                {project.title}
-              </h2>
-              <p className="mt-3 text-xs font-semibold uppercase tracking-[0.16em] text-cream/75">
-                {project.place[contentLocale] ?? project.place.ru}
-              </p>
-            </div>
-          </Link>
-        ))}
+          </svg>
+        </button>
+        <button
+          type="button"
+          onClick={() => scrollByCard(1)}
+          aria-label={t("featured.next")}
+          className="carousel-arrow carousel-arrow-next grid place-items-center rounded-full border border-cream/40 bg-graphite/60 text-cream backdrop-blur transition hover:border-cream hover:bg-graphite"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M9 18l6-6-6-6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
       </div>
     </section>
   );

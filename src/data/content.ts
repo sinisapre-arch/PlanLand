@@ -2,12 +2,12 @@ import type { LocalizedString } from "./projects";
 
 /** Principles shown on the home page and Scandinavian-garden page. */
 export const principles: LocalizedString[] = [
-  { ru: "Приглашает природу на участок", en: "Invites nature onto the plot" },
-  { ru: "Имеет характер", en: "Has character" },
-  { ru: "Геометричен", en: "Is geometric" },
-  { ru: "Обладает чистотой основы", en: "Has clarity of base" },
-  { ru: "Вдохновлён нуаром", en: "Is noir-inspired" },
-  { ru: "Сказочный", en: "Is fairy-tale" },
+  { ru: "Растёт из натуральных материалов", en: "Grows from natural materials" },
+  { ru: "Спокойный до того, как станет спроектированным", en: "Feels calm before it feels designed" },
+  { ru: "Работает так, как вы живёте", en: "Works for the way you actually live" },
+  { ru: "Создан на поколения", en: "Built to last for generations" },
+  { ru: "Честный с бюджетом, щедрый заботой", en: "Honest about budget, generous with care" },
+  { ru: "Для медленных утра и долгих вечеров", en: "Made for slow mornings and long evenings" },
 ];
 
 /** Services (title + body pairs for the Services page). */
@@ -15,43 +15,43 @@ export const services: { title: LocalizedString; body: LocalizedString }[] = [
   {
     title: { ru: "Предпроектное обследование", en: "Pre-project survey" },
     body: {
-      ru: "Выезд на участок, инженерная и дендрологическая съёмка, анализ почв и инсоляции. На этом этапе фиксируются ограничения и возможности территории.",
-      en: "Site visit, engineering and dendrological survey, soil and insolation analysis. Constraints and opportunities of the plot are fixed at this stage.",
+      ru: "Выезд на участок, чтобы услышать, чего хочет клиент, как он будет пользоваться пространством и какие референсы у него есть. Мы проверяем официальные кадастровые чертежи и замеряем территорию самостоятельно, чтобы подтвердить, что реально возможно.",
+      en: "On-site consultation to hear what the client wants, how they'll use the space, and any references they have. We review the official cadastral surveyor drawings and then take our own measurements on site to confirm what's actually possible.",
     },
   },
   {
     title: { ru: "Концептуальный проект", en: "Concept design" },
     body: {
-      ru: "Эскизное планировочное решение, зонирование, образ сада. Согласуем сценарии и характер среды до перехода к рабочей документации.",
-      en: "Sketch planning solution, zoning, the garden’s image. We agree on scenarios and the character of the environment before moving to working documentation.",
+      ru: "Строим дизайн в цифре с помощью фотограмметрии и 3D-визуализации. Каждому клиенту даём доступ к приватной странице проекта, где живут все концептуальные чертежи и 3D-изображения — ведём через каждый этап дизайна до утверждённого плана.",
+      en: "We build out the design digitally, using photogrammetry and 3D visualization. Every client gets a private project site where all concept drawings and 3D images live, walking them through each design phase up to a final approved plan.",
     },
   },
   {
     title: { ru: "Рабочая документация", en: "Detailed design" },
     body: {
-      ru: "Разбивочный и посадочный чертежи, схемы полива и освещения, малые формы. Полный комплект для реализации под ключ.",
-      en: "Setting-out and planting drawings, irrigation and lighting schemes, street furniture. A full set for turnkey implementation.",
+      ru: "Разбивочные и посадочные чертежи, схемы полива и освещения, материалы, дренаж, сносоуборочное оборудование, парковка, посадки (газон рулонный или посевной) — каждый деталь, формирующая итоговую стройку.",
+      en: "Setting-out and planting drawings, irrigation and lighting schemes, materials, drainage, snow removal, parking, planting areas (turf laid or seeded) — every detail that shapes the final build.",
     },
   },
   {
     title: { ru: "Авторский надзор", en: "Design supervision" },
     body: {
-      ru: "Сопровождаем стройку, контролируем соблюдение проекта и оперативно вносим корректировки по месту.",
-      en: "We supervise construction, check compliance with the design and make prompt on-site adjustments.",
+      ru: "Остаёмся на объекте в ходе стройки, проверяем работы на соответствие утверждённому проекту и вносим правки по месту при необходимости.",
+      en: "We stay on site through construction, checking the work against the approved design and adjusting details on the spot as needed.",
     },
   },
   {
     title: { ru: "Реализация", en: "Implementation" },
     body: {
-      ru: "Заводим собственные бригады и подрядчиков. Полный цикл работ по благоустройству — от вертикальной планировки до посадки крупномеров.",
-      en: "We bring our own crews and contractors. A full scope of works — from vertical grading to planting mature specimens.",
+      ru: "Свои бригады строят сад — полный цикл, от вертикальной планировки до посадки крупномеров. Так как Синиша и проектировщик, и строитель, ничего не теряется между чертежом и реальностью.",
+      en: "Our own crews build the garden — full cycle, from grading to planting mature specimens. Because Sinisa is both the designer and the builder, nothing gets lost between drawing and reality.",
     },
   },
   {
     title: { ru: "Уход", en: "Maintenance" },
     body: {
-      ru: "Сезонное обслуживание сада по регламенту. Помогаем саду войти в форму и поддерживаем его десятилетиями.",
-      en: "Seasonal maintenance on a schedule. We help the garden settle in and maintain it for decades.",
+      ru: "Сезонный уход, чтобы сад прижился и жил десятилетиями.",
+      en: "Seasonal care to help the garden settle in and keep it thriving for years.",
     },
   },
 ];
@@ -67,12 +67,12 @@ export const team: {
     // Name rendered in Russian (site primary language).
     name: "Синиша Предраговић",
     role: {
-      ru: "Сооснователь",
-      en: "Co-founder",
+      ru: "Сооснователь, дизайнер и строитель",
+      en: "Co-founder, designer & builder",
     },
     bio: {
-      ru: "Сооснователь PlanoLand. Отвечает за творческое направление студии и архитектурные решения проектов.",
-      en: "Co-founder of PlanoLand. Leads the studio’s creative direction and the architectural decisions behind each project.",
+      ru: "Синиша 15 лет проектировал и строил ландшафты в Швеции, прежде чем принести этот ремесло в Подмосковье с PlanoLand. Он участвует в каждом проекте от первого эскиза до последнего камня — он и проектирует сад, и строит его. Строительство — его страсть: создавать пространства, которые стоят поколениями и приносят красоту, тишину и радость тем, кто в них живёт.",
+      en: "Sinisa spent 15 years designing and building landscapes in Sweden before bringing that craft to the Moscow region with PlanoLand. He's involved in every project from the first sketch to the last stone — he's the one who designs the garden, and the one who builds it. Construction is his passion: creating spaces that stand for generations, and that bring beauty, quiet, and joy to the people who live in them.",
     },
     photo: "/images/studio/founders.webp",
   },
@@ -80,12 +80,12 @@ export const team: {
     // Name rendered in Russian (site primary language).
     name: "Лыхно Георгий Александрович",
     role: {
-      ru: "Сооснователь",
-      en: "Co-founder",
+      ru: "Сооснователь, работа с клиентами",
+      en: "Co-founder, client relations",
     },
     bio: {
-      ru: "Сооснователь PlanoLand. Курирует операционную часть студии и сопровождает проекты от первой встречи до сдачи сада.",
-      en: "Co-founder of PlanoLand. Oversees the studio’s operations and guides projects from the first meeting to garden handover.",
+      ru: "Георгий — основатель Planodom (https://planodom.ru), строящего подключаемые модульные дома по Подмосковью с репутацией быстрых, надёжных за 60 дней и стройкой, за которую он отвечает лично. В PlanoLand он ведёт клиентскую сторону каждого проекта — от первого контакта до сдачи — чтобы клиенты получали ту же полноцикловую надёжность в саде, что и клиенты Planodom в доме.",
+      en: "Georgy is the founder of Planodom (https://planodom.ru), building turnkey modular homes across the Moscow region with a reputation for fast, reliable 60-day builds and construction he personally stands behind. At PlanoLand, he leads the client side of every project — from first contact through handover — so that clients get the same full-cycle trust in their garden that Planodom clients get in their home.",
     },
     photo: "/images/studio/founders.webp",
   },
@@ -100,40 +100,40 @@ export const blogPosts: {
   image: string;
 }[] = [
   {
-    slug: "scandinavian-garden-philosophy",
+    slug: "scandinavian-design-russian-winters",
     title: {
-      ru: "Философия скандинавского сада",
-      en: "The philosophy of the Scandinavian garden",
+      ru: "Скандинавский дизайн, русские зимы",
+      en: "Scandinavian design, Russian winters",
     },
     excerpt: {
-      ru: "Почему сдержанность и геометрия важнее обилия деталей, и как это связано с климатом.",
-      en: "Why restraint and geometry matter more than abundance of detail, and how it ties to climate.",
+      ru: "Как шведская ландшафтная техника адаптируется к более суровому, снежному климату.",
+      en: "How Swedish landscape technique adapts to a harsher, snowier climate.",
     },
     date: "2026-03-14",
     image: "https://ext.same-assets.com/3686561945/3311752931.webp",
   },
   {
-    slug: "materials-and-texture",
+    slug: "what-photogrammetry-does-for-your-garden",
     title: {
-      ru: "Материалы и текстура: кортен, камень, мох",
-      en: "Materials and texture: corten, stone, moss",
+      ru: "Что делает фотограмметрия для вашего сада",
+      en: "What photogrammetry actually does for your garden design",
     },
     excerpt: {
-      ru: "Как палитра поверхностей формирует ощущение сада зимой и летом.",
-      en: "How the surface palette shapes the feel of the garden in winter and summer.",
+      ru: "Простое объяснение процесса съёмки/3D, через который проходит каждый клиент.",
+      en: "A plain-English explanation of the survey/3D process every client goes through.",
     },
     date: "2026-02-02",
     image: "https://ext.same-assets.com/3686561945/3484833766.webp",
   },
   {
-    slug: "north-climate-planting",
+    slug: "you-dont-have-to-build-it-all-in-one-summer",
     title: {
-      ru: "Посадки для северного климата",
-      en: "Planting for a northern climate",
+      ru: "Не обязательно строить всё за одно лето",
+      en: "You don't have to build it all in one summer",
     },
     excerpt: {
-      ru: "Подбор ассортимента для короткого вегетационного периода и холодных зим.",
-      en: "Choosing a plant palette for a short growing season and cold winters.",
+      ru: "Как поэтапное, сезон-за-сезоном строительство делает большой сад доступным.",
+      en: "How phased, season-by-season construction makes a bigger garden affordable.",
     },
     date: "2026-01-20",
     image: "https://ext.same-assets.com/3686561945/2915188378.webp",
