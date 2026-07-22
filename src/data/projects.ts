@@ -37,8 +37,6 @@ export type Project = {
   featured?: boolean;
 };
 
-const img = (id: string) => `https://ext.same-assets.com/3686561945/${id}.webp`;
-
 export const projects: Project[] = [
   {
     slug: "djursholm",
@@ -279,123 +277,6 @@ export const projects: Project[] = [
       "/images/projects/garden/gallery/11.webp",
     ],
     featured: true,
-  },
-  {
-    slug: "villa-1905",
-    title: "Японская вилла 1905",
-    place: { ru: "Калининград", en: "Kaliningrad" },
-    category: "private",
-    image: img("1598934213"),
-    specs: {
-      area: { ru: "0.25 ГА", en: "0.25 ha" },
-      year: "2019",
-      location: { ru: "Калининград", en: "Kaliningrad" },
-      status: "realized",
-    },
-    description: {
-      ru: "Историческая вилла 1905 года. Сад отсылает к японской эстетике: сдержанная палитра, мшистые покрытия, листопадные сорта с выраженной сезонностью.",
-      en: "A historic 1905 villa. The garden references Japanese aesthetics: a restrained palette, moss surfaces, deciduous species with strong seasonality.",
-    },
-    gallery: [],
-  },
-  {
-    slug: "hrustalnoe",
-    title: "Хрустальное",
-    place: {
-      ru: "Курортный район Санкт-Петербурга",
-      en: "Resort district of St. Petersburg",
-    },
-    category: "public",
-    image: img("962186290"),
-    specs: {
-      area: { ru: "12 ГА", en: "12 ha" },
-      year: "2024",
-      location: { ru: "Санкт-Петербург", en: "St. Petersburg" },
-      status: "realized",
-    },
-    description: {
-      ru: "Общественное пространство в Курортном районе. Сценарий ориентирован на отдыхающих и местных жителей: прогулочные маршруты, зоны тишины и точки активности у воды.",
-      en: "A public space in the Resort district. The program is built around holidaymakers and locals: walking routes, quiet zones and activity hubs by the water.",
-    },
-    gallery: [],
-  },
-  {
-    slug: "divnyy-sad",
-    title: "Дивный сад",
-    place: {
-      ru: "Солнечное, Санкт-Петербург",
-      en: "Solnechnoye, St. Petersburg",
-    },
-    category: "private",
-    image: img("4137702356"),
-    specs: {
-      area: { ru: "0.5 ГА", en: "0.5 ha" },
-      year: "2018",
-      location: { ru: "Солнечное", en: "Solnechnoye" },
-      status: "realized",
-    },
-    description: {
-      ru: "«Дивный сад» — игра с масштабом и перспективой: миниатюрные сцены и крупные формальные посадки чередуются, создавая ощущение большего пространства на небольшом участке.",
-      en: "A “wondrous garden” — a play of scale and perspective: miniature scenes alternate with large formal plantings, creating a sense of greater space on a small plot.",
-    },
-    gallery: [],
-  },
-  {
-    slug: "dubldomovo",
-    title: "DUBLDOMOVO",
-    place: {
-      ru: "Снегири, Московская область",
-      en: "Snegiri, Moscow region",
-    },
-    category: "public",
-    image: img("1503215495"),
-    specs: {
-      area: { ru: "0.3 ГА", en: "0.3 ha" },
-      year: "2019",
-      location: { ru: "Снегири", en: "Snegiri" },
-      status: "realized",
-    },
-    description: {
-      ru: "Шоурум-сад для производителя модульных домов. Растения и материалы подобраны так, чтобы продемонстрировать разные сценарии озеленения типовых участков.",
-      en: "A showroom-garden for a manufacturer of modular houses. Plants and materials are chosen to demonstrate different planting scenarios for typical plots.",
-    },
-    gallery: [],
-  },
-  {
-    slug: "les",
-    title: "ЛЕС",
-    place: { ru: "Ленинградская область", en: "Leningrad region" },
-    category: "private",
-    image: img("3005789875"),
-    specs: {
-      area: { ru: "2.5 ГА", en: "2.5 ha" },
-      year: "2022",
-      location: { ru: "Ленинградская область", en: "Leningrad region" },
-      status: "concept",
-    },
-    description: {
-      ru: "Концепция загородной резиденции в существующем лесу. Основная задача — сохранить характер древостоя и встроить функциональные площадки в междурядья.",
-      en: "A concept for a country residence within an existing forest. The main task is to preserve the stand’s character and fit functional platforms between the trees.",
-    },
-    gallery: [],
-  },
-  {
-    slug: "severnyy-sad",
-    title: "Северный сад",
-    place: { ru: "Карелия", en: "Karelia" },
-    category: "private",
-    image: img("91979756"),
-    specs: {
-      area: { ru: "0.7 ГА", en: "0.7 ha" },
-      year: "2021",
-      location: { ru: "Карелия", en: "Karelia" },
-      status: "realized",
-    },
-    description: {
-      ru: "Северный сад: палитра ограничена холодными оттенками хвои и серого камня. Растения морозостойки и подобраны с учётом короткого вегетационного периода.",
-      en: "A northern garden: the palette is limited to cool conifer tones and grey stone. Plants are frost-hardy and chosen for a short growing season.",
-    },
-    gallery: [],
   },
 ];
 
