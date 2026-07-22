@@ -47,9 +47,6 @@ export default function ProjectCard({
         <h3 className="font-expanded text-3xl font-black uppercase leading-none tracking-[-0.05em]">
           {project.title}
         </h3>
-        <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-cream/75">
-          {project.place[contentLocale] ?? project.place.ru}
-        </p>
       </div>
     </Link>
   );

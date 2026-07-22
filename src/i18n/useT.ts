@@ -187,7 +187,6 @@ export const strings = {
   },
   "project.spec.area": { ru: "Площадь", en: "Area" },
   "project.spec.year": { ru: "Год", en: "Year" },
-  "project.spec.location": { ru: "Локация", en: "Location" },
   "project.spec.status": { ru: "Статус", en: "Status" },
   "project.spec.status.realized": { ru: "Реализован", en: "Realized" },
   "project.spec.status.concept": { ru: "Концепция", en: "Concept" },

@@ -134,9 +134,6 @@ function FeaturedProjects() {
                 <h2 className="font-expanded text-4xl font-black uppercase leading-none tracking-[-0.05em] sm:text-5xl">
                   {project.title}
                 </h2>
-                <p className="mt-3 text-xs font-semibold uppercase tracking-[0.16em] text-cream/75">
-                  {project.place[contentLocale] ?? project.place.ru}
-                </p>
               </div>
             </Link>
           ))}

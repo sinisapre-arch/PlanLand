@@ -17,19 +17,14 @@ export default function ProjectDetail() {
 
   if (!project) return <NotFound />;
 
-  const place = project.place[contentLocale] ?? project.place.ru;
   const description =
     project.description[contentLocale] ?? project.description.ru;
   const area = project.specs.area[contentLocale] ?? project.specs.area.ru;
-  const location =
-    project.specs.location[contentLocale] ?? project.specs.location.ru;
   const next = getNextProject(project.slug);
-  const nextPlace = next.place[contentLocale] ?? next.place.ru;
 
   const specRows = [
     { label: t("project.spec.area"), value: area },
     { label: t("project.spec.year"), value: project.specs.year },
-    { label: t("project.spec.location"), value: location },
     {
       label: t("project.spec.status"),
       value: project.specs.status
@@ -68,9 +63,6 @@ export default function ProjectDetail() {
             <h1 className="font-expanded text-6xl font-black uppercase leading-[0.84] tracking-[-0.06em] sm:text-8xl lg:text-9xl">
               {project.title}
             </h1>
-            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-cream/80">
-              {place}
-            </p>
           </div>
         </div>
       </section>
@@ -137,9 +129,6 @@ export default function ProjectDetail() {
               <h3 className="mt-2 font-expanded text-4xl font-black uppercase leading-none tracking-[-0.05em] transition group-hover:opacity-70 sm:text-6xl">
                 {next.title}
               </h3>
-              <p className="mt-3 text-xs font-semibold uppercase tracking-[0.16em] text-graphite/65">
-                {nextPlace}
-              </p>
             </div>
             <span className="justify-self-start text-[11px] font-bold uppercase tracking-[0.2em] sm:justify-self-end">
               →
