@@ -57,10 +57,10 @@ function Hero() {
               ] as const
             ).map(([valueKey, labelKey]) => (
               <div key={valueKey} className="bg-cream/85 p-4 sm:p-5">
-                <dt className="font-expanded text-2xl font-black uppercase tracking-[-0.04em] sm:text-3xl">
+                <dt className="font-expanded text-xl font-black uppercase leading-none tracking-[-0.04em] sm:text-2xl">
                   {t(valueKey)}
                 </dt>
-                <dd className="mt-3 text-[10px] font-semibold uppercase leading-snug tracking-[0.16em] text-graphite/65">
+                <dd className="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[0.12em] text-graphite/65 sm:text-[10px]">
                   {t(labelKey)}
                 </dd>
               </div>
