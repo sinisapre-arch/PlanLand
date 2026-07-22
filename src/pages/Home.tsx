@@ -34,7 +34,7 @@ function Hero() {
           <p className="mb-8 max-w-xl text-[11px] font-semibold uppercase leading-relaxed tracking-[0.26em] text-graphite/70">
             {t("hero.eyebrow")}
           </p>
-          <h1 className="font-expanded text-[18vw] font-black uppercase leading-[0.78] tracking-[-0.075em] sm:text-[13vw] lg:text-[9.4vw]">
+          <h1 className="font-expanded text-[12vw] font-black uppercase leading-[0.82] tracking-[-0.05em] sm:text-[8.5vw] lg:text-[6vw]">
             {t("hero.title")
               .split(" ")
               .map((word, i) => (
