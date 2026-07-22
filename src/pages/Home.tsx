@@ -204,7 +204,7 @@ function Studio() {
             <p className="mb-6 text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/55">
               {t("studio.eyebrow")}
             </p>
-            <h2 className="font-expanded text-5xl font-black uppercase leading-[0.86] tracking-[-0.06em] sm:text-7xl lg:text-8xl">
+            <h2 className="font-expanded text-4xl font-black uppercase leading-[0.86] tracking-[-0.06em] sm:text-6xl lg:text-7xl">
               {t("studio.title")}
             </h2>
           </div>
