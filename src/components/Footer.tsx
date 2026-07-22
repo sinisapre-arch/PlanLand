@@ -16,17 +16,13 @@ export default function Footer() {
             <Wordmark size="lg" />
           </Link>
           <div className="mt-8 flex flex-col gap-2 text-sm font-semibold uppercase tracking-[0.12em]">
-            <a href={contactInfo.phoneHrefs[0]}>{contactInfo.phones[0]}</a>
-            <a href={contactInfo.phoneHrefs[1]}>{contactInfo.phones[1]}</a>
+            <a href={contactInfo.phoneHref}>{contactInfo.phone}</a>
             <a href={contactInfo.emailHref}>{contactInfo.email}</a>
           </div>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div>
           <address className="not-italic text-sm uppercase leading-relaxed tracking-[0.1em] text-graphite/75">
             {t("footer.msk")}
-          </address>
-          <address className="not-italic text-sm uppercase leading-relaxed tracking-[0.1em] text-graphite/75">
-            {t("footer.spb")}
           </address>
         </div>
         <div className="flex flex-col justify-between gap-8">

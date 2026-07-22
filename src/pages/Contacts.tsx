@@ -13,20 +13,12 @@ export default function Contacts() {
   const form = useTelegramForm("contact");
   const isSending = form.status.kind === "sending";
 
-  const offices = [
-    {
-      label: t("contacts.msk"),
-      address: t("footer.msk"),
-      phone: contactInfo.phones[0],
-      phoneHref: contactInfo.phoneHrefs[0],
-    },
-    {
-      label: t("contacts.spb"),
-      address: t("footer.spb"),
-      phone: contactInfo.phones[1],
-      phoneHref: contactInfo.phoneHrefs[1],
-    },
-  ];
+  const office = {
+    label: t("contacts.msk"),
+    address: t("footer.msk"),
+    phone: contactInfo.phone,
+    phoneHref: contactInfo.phoneHref,
+  };
 
   return (
     <>
@@ -93,24 +85,22 @@ export default function Contacts() {
             </p>
           </form>
 
-          {/* Offices */}
+          {/* Office */}
           <div className="grid content-start gap-8">
-            {offices.map((office) => (
-              <div key={office.label}>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/55">
-                  {office.label}
-                </p>
-                <p className="mt-3 text-sm uppercase leading-relaxed tracking-[0.1em] text-graphite/80">
-                  {office.address}
-                </p>
-                <a
-                  href={office.phoneHref}
-                  className="mt-3 inline-flex border-b border-graphite pb-1 text-sm font-semibold uppercase tracking-[0.12em]"
-                >
-                  {office.phone}
-                </a>
-              </div>
-            ))}
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/55">
+                {office.label}
+              </p>
+              <p className="mt-3 text-sm uppercase leading-relaxed tracking-[0.1em] text-graphite/80">
+                {office.address}
+              </p>
+              <a
+                href={office.phoneHref}
+                className="mt-3 inline-flex border-b border-graphite pb-1 text-sm font-semibold uppercase tracking-[0.12em]"
+              >
+                {office.phone}
+              </a>
+            </div>
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-graphite/55">
                 {contentLocale === "en" ? "Email" : "Почта"}

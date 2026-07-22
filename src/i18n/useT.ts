@@ -154,8 +154,8 @@ export const strings = {
 
   // ---- Footer ----
   "footer.msk": {
-    ru: "Москва, ул. Саврасова, д. 7, помещ. 2",
-    en: "Moscow, Savrasova st., 7, prem. 2",
+    ru: "Москва, ул. Зорге, д. 9А",
+    en: "Zorge street 9A, Moscow",
   },
   "footer.rights": {
     ru: "2026. Материалы сайта могут быть использованы только с разрешения PlanoLand.",

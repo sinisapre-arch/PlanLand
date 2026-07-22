@@ -80,8 +80,7 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-graphite/80">
           <div className="hidden gap-3 lg:flex">
-            <a href={contactInfo.phoneHrefs[0]}>{contactInfo.phones[0]}</a>
-            <a href={contactInfo.phoneHrefs[1]}>{contactInfo.phones[1]}</a>
+            <a href={contactInfo.phoneHref}>{contactInfo.phone}</a>
           </div>
           <LanguageSwitcher />
           <button
