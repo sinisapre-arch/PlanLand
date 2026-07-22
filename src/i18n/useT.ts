@@ -28,8 +28,8 @@ export const strings = {
     en: "Scandinavian design, built by hand",
   },
   "hero.title": {
-    ru: "От первого эскиза до последнего камня — одна команда видит дело до конца",
-    en: "From the first sketch to the last stone, one team sees it through",
+    ru: "От первого эскиза до последнего камня",
+    en: "From the first sketch to the last stone",
   },
   "hero.lede": {
     ru: "Мы проектируем ваш сад и строим его — одни и те же руки, от начала до конца. Пятнадцать лет скандинавского ландшафтного мастерства теперь работают в Подмосковье.",
