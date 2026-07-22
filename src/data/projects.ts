@@ -218,7 +218,7 @@ export const projects: Project[] = [
   },
   {
     slug: "terrasso",
-    title: "TERRASSO",
+    title: "ТЕРРАССО",
     place: {
       ru: "Стокгольм, Швеция",
       en: "Stockholm, Sweden",
