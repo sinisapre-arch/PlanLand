@@ -101,3 +101,18 @@ input {
     display: grid;
   }
 }
+
+/*
+ * Card titles scale with the card's own width (CSS container queries),
+ * so long single words (e.g. "БЛАГОУСТРОЙСТВО", "ПРОЕКТИРОВАНИЕ")
+ * never overflow or clip, regardless of grid/carousel breakpoint.
+ */
+.card-title-container {
+  container-type: inline-size;
+}
+.card-title {
+  font-size: clamp(18px, 7cqw, 30px);
+}
+.card-title-lg {
+  font-size: clamp(20px, 7cqw, 40px);
+}

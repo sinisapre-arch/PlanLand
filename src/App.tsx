@@ -26,7 +26,6 @@ function makeRoutes() {
       <Route path="team" element={<Team />} />
       <Route path="contacts" element={<Contacts />} />
       <Route path="blog" element={<Blog />} />
-      <Route path="blog/:slug" element={<Blog />} />
       {/* Legal pages — same component handles them all. */}
       <Route path="policy" element={<Legal />} />
       <Route path="agree" element={<Legal />} />

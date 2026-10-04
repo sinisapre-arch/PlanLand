@@ -22,7 +22,7 @@ export default function ProjectCard({
   return (
     <Link
       to={lp(`/portfolio/${project.slug}`)}
-      className={`group relative overflow-hidden bg-graphite ${
+      className={`card-title-container group relative overflow-hidden bg-graphite ${
         feature ? "sm:col-span-2 sm:row-span-2" : ""
       }`}
     >
@@ -44,7 +44,7 @@ export default function ProjectCard({
         </span>
       )}
       <div className="absolute inset-x-4 bottom-4 text-cream">
-        <h3 className="font-expanded text-3xl font-black uppercase leading-none tracking-[-0.05em]">
+        <h3 className="card-title font-expanded font-black uppercase leading-none tracking-[-0.05em]">
           {project.title}
         </h3>
       </div>

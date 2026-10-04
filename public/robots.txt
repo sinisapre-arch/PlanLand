@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://plan-land.vercel.app/sitemap.xml

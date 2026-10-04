@@ -32,7 +32,7 @@ export default function PageHeader({
             {eyebrow}
           </p>
         )}
-        <h1 className="font-expanded text-5xl font-black uppercase leading-[0.86] tracking-[-0.06em] sm:text-7xl lg:text-8xl">
+        <h1 className="font-expanded text-[8.5vw] font-black uppercase leading-[0.86] tracking-[-0.06em] sm:text-6xl lg:text-8xl">
           {title}
         </h1>
         {lede && (

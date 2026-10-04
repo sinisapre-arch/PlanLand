@@ -1,14 +1,11 @@
-import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import Seo from "../components/Seo";
 import { blogPosts } from "../data/content";
 import { useLang } from "../i18n/LangContext";
-import { useLocalePath } from "../i18n/routes";
 import { useT } from "../i18n/useT";
 
 export default function Blog() {
   const t = useT();
-  const lp = useLocalePath();
   const { contentLocale } = useLang();
 
   return (
@@ -26,18 +23,20 @@ export default function Blog() {
           {blogPosts.map((post) => {
             const title = post.title[contentLocale] ?? post.title.ru;
             const excerpt = post.excerpt[contentLocale] ?? post.excerpt.ru;
+            // Cards are not links until real article pages exist — linking
+            // them to the same list again reads as duplicate content to
+            // search engines.
             return (
-              <Link
+              <article
                 key={post.slug}
-                to={lp(`/blog/${post.slug}`)}
-                className="group overflow-hidden bg-graphite/5"
+                className="overflow-hidden bg-graphite/5"
               >
                 <div className="relative aspect-[4/3] w-full overflow-hidden bg-graphite">
                   <img
                     src={post.image}
                     alt={title}
                     loading="lazy"
-                    className="h-full w-full object-cover opacity-90 transition duration-700 group-hover:scale-105"
+                    className="h-full w-full object-cover opacity-90"
                   />
                 </div>
                 <div className="p-5">
@@ -54,7 +53,7 @@ export default function Blog() {
                     {excerpt}
                   </p>
                 </div>
-              </Link>
+              </article>
             );
           })}
         </div>

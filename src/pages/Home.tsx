@@ -118,7 +118,7 @@ function FeaturedProjects() {
               key={project.slug}
               to={lp(`/portfolio/${project.slug}`)}
               data-card
-              className="group relative h-[62vh] min-h-[480px] w-[78vw] max-w-[560px] shrink-0 snap-center overflow-hidden bg-black sm:w-[44vw] lg:w-[29vw]"
+              className="card-title-container group relative h-[62vh] min-h-[480px] w-[78vw] max-w-[560px] shrink-0 snap-center overflow-hidden bg-black sm:w-[44vw] lg:w-[29vw]"
             >
               <img
                 src={project.image}
@@ -131,7 +131,7 @@ function FeaturedProjects() {
                 <span>{t("featured.label")}</span>
               </div>
               <div className="absolute inset-x-5 bottom-6">
-                <h2 className="font-expanded text-4xl font-black uppercase leading-none tracking-[-0.05em] sm:text-5xl">
+                <h2 className="card-title-lg font-expanded font-black uppercase leading-none tracking-[-0.05em]">
                   {project.title}
                 </h2>
               </div>
@@ -236,11 +236,11 @@ function Principles() {
         }}
       />
       <div className="relative mx-auto max-w-[1760px]">
-        <div className="mb-14 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <h2 className="font-expanded text-5xl font-black uppercase leading-[0.84] tracking-[-0.06em] sm:text-7xl lg:text-8xl">
+        <div className="mb-14 grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
+          <h2 className="font-expanded text-[8.5vw] font-black uppercase leading-[0.84] tracking-[-0.06em] sm:text-6xl lg:text-7xl xl:text-[5.5vw]">
             {t("principles.title")}
           </h2>
-          <p className="max-w-2xl text-lg leading-relaxed text-cream/85 lg:pt-4">
+          <p className="max-w-2xl text-lg leading-relaxed text-cream/85 xl:pt-4">
             {t("principles.lede")}
           </p>
         </div>
@@ -280,7 +280,7 @@ function PortfolioPreview() {
     >
       <div className="mx-auto max-w-[1760px]">
         <div className="mb-10 flex items-end justify-between gap-6 border-b border-graphite/25 pb-5">
-          <h2 className="font-expanded text-6xl font-black uppercase leading-none tracking-[-0.07em] sm:text-8xl lg:text-9xl">
+          <h2 className="font-expanded text-[13.5vw] font-black uppercase leading-none tracking-[-0.07em] sm:text-7xl lg:text-8xl xl:text-9xl">
             {t("portfolio.title")}
           </h2>
           <Link
