@@ -2,12 +2,12 @@ import type { LocalizedString } from "./projects";
 
 /** Principles shown on the home page and Scandinavian-garden page. */
 export const principles: LocalizedString[] = [
-  { ru: "Растёт из натуральных материалов", en: "Grows from natural materials" },
-  { ru: "Спокойный до того, как станет спроектированным", en: "Feels calm before it feels designed" },
-  { ru: "Работает так, как вы живёте", en: "Works for the way you actually live" },
-  { ru: "Создан на поколения", en: "Built to last for generations" },
-  { ru: "Честный с бюджетом, щедрый заботой", en: "Honest about budget, generous with care" },
-  { ru: "Для медленных утра и долгих вечеров", en: "Made for slow mornings and long evenings" },
+  { ru: "Сад, как продолжение дома", en: "A garden as a continuation of the home" },
+  { ru: "Эргономика и функциональное зонирование", en: "Ergonomics and functional zoning" },
+  { ru: "Сад, который растёт сам, пока вы отдыхаете", en: "A garden that grows by itself while you rest" },
+  { ru: "Создаётся на поколения", en: "Built to last for generations" },
+  { ru: "Честный бюджет и практичность", en: "Honest budget and practicality" },
+  { ru: "Для неспешного утра и долгого вечера", en: "For slow mornings and long evenings" },
 ];
 
 /** Services (title + body pairs for the Services page). */

@@ -24,23 +24,26 @@ export const strings = {
 
   // ---- Hero ----
   "hero.eyebrow": {
-    ru: "Скандинавский дизайн, построенный своими руками",
-    en: "Scandinavian design, built by hand",
+    ru: "Скандинавский дизайн",
+    en: "Scandinavian design",
   },
   "hero.title": {
     ru: "От первого эскиза до последнего камня",
     en: "From the first sketch to the last stone",
   },
   "hero.lede": {
-    ru: "Мы проектируем ваш сад и строим его — одни и те же руки, от начала до конца. Пятнадцать лет скандинавского ландшафтного мастерства теперь работают в Подмосковье.",
-    en: "We design your garden and we build it — the same hands, start to finish. Fifteen years of Scandinavian landscape craft, now at work in the Moscow region.",
+    ru: "Мы спроектируем и построим вам сад с нуля. 15 лет опыта в Европе и России.",
+    en: "We design and build your garden from scratch. 15 years of experience in Europe and Russia.",
   },
   "hero.stat1.value": { ru: "15 лет", en: "15 years" },
-  "hero.stat1.label": { ru: "скандинавский дизайн и стройка", en: "Scandinavian design & construction" },
+  "hero.stat1.label": { ru: "в дизайне и строительстве", en: "in design and construction" },
   "hero.stat2.value": { ru: "300+", en: "300+" },
   "hero.stat2.label": { ru: "садов спроектировано и построено", en: "gardens designed and built" },
-  "hero.stat3.value": { ru: "1 команда", en: "1 team" },
-  "hero.stat3.label": { ru: "дизайн через стройку, от начала до конца", en: "design through construction, start to finish" },
+  "hero.stat3.value": { ru: "Команда", en: "One team" },
+  "hero.stat3.label": {
+    ru: "авторский надзор и личное присутствие дизайнера на объекте",
+    en: "design supervision and the designer's personal presence on site",
+  },
 
   // ---- Featured projects ----
   "featured.label": { ru: "проект", en: "project" },
@@ -53,16 +56,12 @@ export const strings = {
     en: "PlanoLand landscape design studio",
   },
   "studio.title": {
-    ru: "Создаём среду, где жизнь обретает новые сценарии",
-    en: "We create spaces where life takes on new scenarios",
+    ru: "Создаем пространство, в котором хочется жить",
+    en: "We create a space you want to live in",
   },
   "studio.caption": {
     ru: "Синиша Предраговић и Лыхно Георгий Александрович — основатели PlanoLand",
     en: "Siniša Predragović and Georgiy A. Lykhno — founders of PlanoLand",
-  },
-  "studio.quote": {
-    ru: "Не «у меня есть сад», а «я нахожусь в саду».",
-    en: "Not “I have a garden”, but “I am in the garden”.",
   },
   "studio.body1": {
     ru: "Сад — это способ быть здесь и сейчас. Пространство, которое меняет образ мыслей и жизни, где человек чувствует опору, связь с собой и миром.",

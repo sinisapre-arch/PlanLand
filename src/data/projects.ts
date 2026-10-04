@@ -40,7 +40,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "djursholm",
-    title: "Серый Гранит",
+    title: "Мощение и вертикальная планировка",
     place: { ru: "Стокгольм, Швеция", en: "Stockholm, Sweden" },
     category: "private",
     image: "/images/projects/djursholm/cover.webp",
@@ -75,7 +75,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sollentuna",
-    title: "Терракота и Вода",
+    title: "Водное благоустройство",
     place: { ru: "Соллентуна, Швеция", en: "Sollentuna, Sweden" },
     category: "private",
     image: "/images/projects/sollentuna/cover.webp",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gustavsberg",
-    title: "Тёмный Сланец",
+    title: "Благоустройство территории",
     place: {
       ru: "Густавсберг, Швеция",
       en: "Gustavsberg, Sweden",
@@ -129,7 +129,7 @@ export const projects: Project[] = [
   },
   {
     slug: "lidingo",
-    title: "Гранитный Булыжник",
+    title: "Озеленение",
     place: {
       ru: "Лидингё, Швеция",
       en: "Lidingö, Sweden",
@@ -163,7 +163,7 @@ export const projects: Project[] = [
   },
   {
     slug: "buxus",
-    title: "БУКСУС",
+    title: "Посадка растений",
     place: {
       ru: "Джурсхольм, Швеция",
       en: "Djursholm, Sweden",
@@ -190,7 +190,7 @@ export const projects: Project[] = [
   },
   {
     slug: "hacienda",
-    title: "АСЬЕНДА",
+    title: "3D визуализация",
     place: {
       ru: "Медное озеро, Ленинградская область",
       en: "Mednoye lake, Leningrad region",
@@ -216,7 +216,7 @@ export const projects: Project[] = [
   },
   {
     slug: "terrasso",
-    title: "ТЕРРАССО",
+    title: "Малые архитектурные формы",
     place: {
       ru: "Стокгольм, Швеция",
       en: "Stockholm, Sweden",
@@ -246,7 +246,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sad",
-    title: "САД",
+    title: "Земляные работы и проектирование",
     place: {
       ru: "Стокгольм, Швеция",
       en: "Stockholm, Sweden",

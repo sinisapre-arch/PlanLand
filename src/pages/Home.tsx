@@ -205,20 +205,15 @@ function Studio() {
               {t("studio.title")}
             </h2>
           </div>
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-            <blockquote className="border-l border-graphite pl-5 text-xl uppercase leading-tight tracking-[-0.02em] sm:text-2xl">
-              {t("studio.quote")}
-            </blockquote>
-            <div className="space-y-5 text-base leading-relaxed text-graphite/80 sm:text-lg">
-              <p>{t("studio.body1")}</p>
-              <p>{t("studio.body2")}</p>
-              <Link
-                to={lp("/team")}
-                className="inline-flex border-b border-graphite pb-1 text-[11px] font-bold uppercase tracking-[0.2em]"
-              >
-                {t("studio.cta")}
-              </Link>
-            </div>
+          <div className="max-w-2xl space-y-5 text-base leading-relaxed text-graphite/80 sm:text-lg">
+            <p>{t("studio.body1")}</p>
+            <p>{t("studio.body2")}</p>
+            <Link
+              to={lp("/team")}
+              className="inline-flex border-b border-graphite pb-1 text-[11px] font-bold uppercase tracking-[0.2em]"
+            >
+              {t("studio.cta")}
+            </Link>
           </div>
         </div>
       </div>
