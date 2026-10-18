@@ -1,51 +1,23 @@
-import { useMemo } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useCallback, useRef } from "react";
 import PageHeader from "../components/PageHeader";
 import ProjectCard from "../components/ProjectCard";
 import Seo from "../components/Seo";
-import { type ProjectCategory, projects } from "../data/projects";
+import { projects } from "../data/projects";
 import { useLang } from "../i18n/LangContext";
 import { useT } from "../i18n/useT";
-
-type Filter = "all" | ProjectCategory;
-
-const FILTERS: Filter[] = ["all", "private", "public"];
-
-function isFilter(value: string | null): value is Filter {
-  return value === "all" || value === "private" || value === "public";
-}
 
 export default function Portfolio() {
   const t = useT();
   const { contentLocale } = useLang();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const active = isFilter(searchParams.get("category"))
-    ? (searchParams.get("category") as Filter)
-    : "all";
+  const scrollerRef = useRef<HTMLDivElement>(null);
 
-  const visible = useMemo(
-    () =>
-      active === "all"
-        ? projects
-        : projects.filter((p) => p.category === active),
-    [active],
-  );
-
-  const setFilter = (next: Filter) => {
-    const params = new URLSearchParams(searchParams);
-    if (next === "all") {
-      params.delete("category");
-    } else {
-      params.set("category", next);
-    }
-    setSearchParams(params, { replace: true });
-  };
-
-  const filterLabels: Record<Filter, ReturnType<typeof useT>> = {
-    all: t("portfolio.filter.all"),
-    private: t("portfolio.filter.private"),
-    public: t("portfolio.filter.public"),
-  };
+  const scrollByCard = useCallback((direction: 1 | -1) => {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.querySelector<HTMLElement>("[data-card]");
+    const step = card ? card.offsetWidth + 16 : el.clientWidth * 0.8;
+    el.scrollBy({ left: direction * step, behavior: "smooth" });
+  }, []);
 
   return (
     <>
@@ -63,35 +35,40 @@ export default function Portfolio() {
         tone="cream"
       />
 
-      <section className="bg-cream px-4 pb-20 text-graphite sm:px-6 lg:px-10">
-        <div className="mx-auto max-w-[1760px]">
-          <div className="mb-8 flex flex-wrap gap-2">
-            {FILTERS.map((filter) => (
-              <button
-                key={filter}
-                type="button"
-                onClick={() => setFilter(filter)}
-                className={`border px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] transition ${
-                  active === filter
-                    ? "border-graphite bg-graphite text-cream"
-                    : "border-graphite/30 text-graphite/70 hover:border-graphite"
-                }`}
-              >
-                {filterLabels[filter]}
-              </button>
-            ))}
-          </div>
+      <section className="bg-cream pb-20 text-graphite">
+        <div
+          ref={scrollerRef}
+          className="no-scrollbar flex snap-x gap-4 overflow-x-auto px-4 scroll-smooth sm:px-6 lg:px-10"
+          aria-label={t("portfolio.title")}
+        >
+          {projects.map((project, index) => (
+            <div
+              key={project.slug}
+              data-card
+              className="h-[54vh] min-h-[400px] w-[82vw] max-w-[520px] shrink-0 snap-center sm:w-[58vw] lg:w-[38vw]"
+            >
+              <ProjectCard project={project} index={index} />
+            </div>
+          ))}
+        </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {visible.map((project, index) => (
-              <ProjectCard
-                key={project.slug}
-                project={project}
-                index={index}
-                feature={index % 5 === 0}
-              />
-            ))}
-          </div>
+        <div className="mx-auto mt-8 flex max-w-[1760px] justify-end gap-3 px-4 sm:px-6 lg:px-10">
+          <button
+            type="button"
+            onClick={() => scrollByCard(-1)}
+            aria-label={t("featured.prev")}
+            className="grid h-11 w-11 place-items-center rounded-full border border-graphite/40 transition hover:bg-graphite hover:text-cream"
+          >
+            <span aria-hidden="true">←</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollByCard(1)}
+            aria-label={t("featured.next")}
+            className="grid h-11 w-11 place-items-center rounded-full border border-graphite/40 transition hover:bg-graphite hover:text-cream"
+          >
+            <span aria-hidden="true">→</span>
+          </button>
         </div>
       </section>
     </>

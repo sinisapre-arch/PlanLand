@@ -9,9 +9,9 @@ import Wordmark from "./Wordmark";
 
 const navItems: { to: string; key: StringKey }[] = [
   { to: "/", key: "nav.home" },
+  { to: "/services", key: "nav.services" },
   { to: "/portfolio", key: "nav.portfolio" },
   { to: "/skandinavskiy-sad", key: "nav.scandinavian" },
-  { to: "/services", key: "nav.services" },
   { to: "/team", key: "nav.team" },
   { to: "/contacts", key: "nav.contacts" },
 ];
@@ -48,17 +48,6 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-stone/20 bg-cream/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-[1760px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-10">
-        <div className="hidden items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-graphite/70 lg:flex">
-          <Link
-            className="border-b border-graphite pb-1"
-            to={lp("/portfolio?category=private")}
-          >
-            {t("nav.private")}
-          </Link>
-          <Link className="pb-1" to={lp("/portfolio?category=public")}>
-            {t("nav.public")}
-          </Link>
-        </div>
         <Link to={lp("/")} className="shrink-0" aria-label="PlanoLand home">
           <Wordmark size="sm" />
         </Link>

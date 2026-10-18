@@ -3,7 +3,7 @@
  * content swaps are trivial. Image URLs reuse the same-assets CDN already
  * in use across the site.
  */
-export type ProjectCategory = "private" | "public";
+export type ProjectCategory = "private";
 
 export type LocalizedString = {
   ru: string;
@@ -12,7 +12,7 @@ export type LocalizedString = {
 
 export type Project = {
   slug: string;
-  title: string;
+  title: LocalizedString;
   /** Short place line shown on cards. */
   place: LocalizedString;
   category: ProjectCategory;
@@ -40,19 +40,19 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "djursholm",
-    title: "Мощение и вертикальная планировка",
+    title: { ru: "Мощение и вертикальная планировка", en: "Paving and site grading" },
     place: { ru: "Стокгольм, Швеция", en: "Stockholm, Sweden" },
     category: "private",
     image: "/images/projects/djursholm/cover.webp",
     specs: {
-      area: { ru: "6 ГА", en: "6 ha" },
+      area: { ru: "1000 м²", en: "1,000 m²" },
       year: "2023",
       location: { ru: "Стокгольм, Швеция", en: "Stockholm, Sweden" },
       status: "realized",
     },
     description: {
-      ru: "Большая усадьба в Рязанской области: лесной массив, луговые зоны и фермерское хозяйство собраны в единую среду. Парадный вход раскрыт к южному фасаду, служебные и хозяйственные сценарии отведены на периферию.",
-      en: "A large estate in the Ryazan region: woodland, meadow zones and a working farm are woven into a single environment. The ceremonial entrance opens to the southern facade, while utility scenarios are pushed to the periphery.",
+      ru: "Ландшафтный проект в Стокгольме. Лестницы, мощение и продуманная вертикальная планировка объединили архитектуру дома и окружающий ландшафт в гармоничное целое. Перепады высот стали частью композиции, а дорожки и посадки сформировали удобные маршруты и уютные зоны для отдыха. В результате получился современный сад, в котором эстетика сочетается с функциональностью, а каждый элемент поддерживает целостность пространства.",
+      en: "A landscape design in Stockholm. Steps, paving and carefully considered grading bring the architecture of the house and the surrounding landscape together. Changes in level become part of the composition, while paths and planting create convenient routes and welcoming places to relax. The result is a modern garden where aesthetics and function work together and every element contributes to a coherent whole.",
     },
     gallery: [
       "/images/projects/djursholm/gallery/01.webp",
@@ -75,19 +75,19 @@ export const projects: Project[] = [
   },
   {
     slug: "sollentuna",
-    title: "Водное благоустройство",
+    title: { ru: "Водное благоустройство", en: "Water and pool landscaping" },
     place: { ru: "Соллентуна, Швеция", en: "Sollentuna, Sweden" },
     category: "private",
     image: "/images/projects/sollentuna/cover.webp",
     specs: {
-      area: { ru: "1.2 ГА", en: "1.2 ha" },
+      area: { ru: "1200 м²", en: "1,200 m²" },
       year: "2022",
       location: { ru: "Соллентуна, Швеция", en: "Sollentuna, Sweden" },
       status: "realized",
     },
     description: {
-      ru: "Загородный дом на берегу водоёма. Композиция построена на контрасте строгих геометрических площадок и свободных луговых посадок, повторяющих природный рельеф.",
-      en: "A waterside country house. The composition is built on the contrast of strict geometric terraces and free meadow plantings that echo the natural terrain.",
+      ru: "Ландшафт загородного дома с бассейном. Геометрия дорожек и ступеней объединяет дом, зону отдыха и бассейн в целостную композицию. Продуманная вертикальная планировка обеспечивает комфортное перемещение по участку, а озеленение смягчает архитектурные линии и создаёт гармоничную связь между домом и садом.",
+      en: "Landscape design for a country home with a pool. The geometry of the paths and steps brings the house, leisure area and pool together in a unified composition. Thoughtful grading makes it comfortable to move around the site, while planting softens the architectural lines and creates a harmonious connection between house and garden.",
     },
     gallery: [
       "/images/projects/sollentuna/gallery/01.webp",
@@ -99,7 +99,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gustavsberg",
-    title: "Благоустройство территории",
+    title: { ru: "Благоустройство территории", en: "Landscape design for a country home" },
     place: {
       ru: "Густавсберг, Швеция",
       en: "Gustavsberg, Sweden",
@@ -107,14 +107,14 @@ export const projects: Project[] = [
     category: "private",
     image: "/images/projects/gustavsberg/cover.webp",
     specs: {
-      area: { ru: "0.8 ГА", en: "0.8 ha" },
+      area: { ru: "2000 м²", en: "2,000 m²" },
       year: "2021",
       location: { ru: "Густавсберг, Швеция", en: "Gustavsberg, Sweden" },
       status: "realized",
     },
     description: {
-      ru: "Архитектурный сад с выраженной каменной оградой (Mauer). Внутренний двор-сад раскрывается по мере движения: от сдержанного входа к открытой лужайке с видом на лес.",
-      en: "An architectural garden defined by a strong stone wall (Mauer). The inner courtyard-garden reveals itself as you move — from a restrained entrance to an open lawn facing the forest.",
+      ru: "Ландшафт загородного дома с выразительной архитектурой. Обширное мощение объединяет дом, зоны отдыха и бассейн в единую композицию. Чёткая геометрия дорожек, аккуратные посадки и лаконичное ограждение формируют ухоженное, гармоничное пространство, где функциональность сочетается с естественной красотой сада.",
+      en: "Landscape design for a country home with distinctive architecture. Extensive paving brings the house, leisure areas and pool together in one composition. Clear path geometry, considered planting and understated fencing create a polished, harmonious space where function meets the natural beauty of the garden.",
     },
     gallery: [
       "/images/projects/gustavsberg/gallery/01.webp",
@@ -129,7 +129,7 @@ export const projects: Project[] = [
   },
   {
     slug: "lidingo",
-    title: "Озеленение",
+    title: { ru: "Озеленение", en: "Garden planting and landscaping" },
     place: {
       ru: "Лидингё, Швеция",
       en: "Lidingö, Sweden",
@@ -137,14 +137,14 @@ export const projects: Project[] = [
     category: "private",
     image: "/images/projects/lidingo/cover.webp",
     specs: {
-      area: { ru: "1.5 ГА", en: "1.5 ha" },
+      area: { ru: "900 м²", en: "900 m²" },
       year: "2020",
       location: { ru: "Лидингё, Швеция", en: "Lidingö, Sweden" },
       status: "realized",
     },
     description: {
-      ru: "Сад, в котором металл, кортен и дикий камень формируют сдержанную палитру материалов. Растительность подобрана так, чтобы подчеркнуть текстуру поверхностей в любое время года.",
-      en: "A garden where metal, corten and wild stone shape a restrained material palette. Planting is chosen to highlight the surface texture year-round.",
+      ru: "Ландшафтный проект с продуманной планировкой, мощением и озеленением. Дорожки и плиточное покрытие формируют удобную структуру участка, а газон и тщательно подобранные растения объединяют пространство в гармоничную композицию. Каждый элемент сада спроектирован с учётом эстетики, функциональности и комфорта в повседневной жизни.",
+      en: "A landscape design with carefully planned layout, paving and planting. Paths and paved areas give the site a practical structure, while the lawn and carefully selected plants bring it together as a harmonious composition. Every garden element is designed with aesthetics, function and everyday comfort in mind.",
     },
     gallery: [
       "/images/projects/lidingo/gallery/01.webp",
@@ -163,7 +163,7 @@ export const projects: Project[] = [
   },
   {
     slug: "buxus",
-    title: "Посадка растений",
+    title: { ru: "Посадка растений", en: "Planting design" },
     place: {
       ru: "Джурсхольм, Швеция",
       en: "Djursholm, Sweden",
@@ -171,14 +171,14 @@ export const projects: Project[] = [
     category: "private",
     image: "/images/projects/buxus/cover.webp",
     specs: {
-      area: { ru: "2 ГА", en: "2 ha" },
+      area: { ru: "2000 м²", en: "2,000 m²" },
       year: "2022",
       location: { ru: "Джурсхольм, Швеция", en: "Djursholm, Sweden" },
       status: "realized",
     },
     description: {
-      ru: "Концепция «замедленного» сада: маршруты и площадки спроектированы так, чтобы снизить темп движения и настроить восприятие на тишину и детали.",
-      en: "A “slow” garden concept: routes and platforms are designed to slow the pace and tune perception to quiet and detail.",
+      ru: "Ландшафтный проект загородного дома в Швеции. Разработали комплексную концепцию участка, объединив озеленение, подъездные дорожки и зону бассейна в единую композицию. Планировка подчёркивает выразительную архитектуру каменного дома, а продуманное сочетание мощения и растений создаёт гармоничное пространство для отдыха и жизни на природе.",
+      en: "Landscape design for a country home in Sweden. The comprehensive site concept brings together planting, access paths and the pool area. The layout highlights the distinctive architecture of the stone house, while the thoughtful combination of paving and plants creates a harmonious place to relax and enjoy life outdoors.",
     },
     gallery: [
       "/images/projects/buxus/gallery/01.webp",
@@ -190,7 +190,7 @@ export const projects: Project[] = [
   },
   {
     slug: "hacienda",
-    title: "3D визуализация",
+    title: { ru: "Летний загородный дом с бассейном", en: "Summer country home with a pool" },
     place: {
       ru: "Медное озеро, Ленинградская область",
       en: "Mednoye lake, Leningrad region",
@@ -198,14 +198,14 @@ export const projects: Project[] = [
     category: "private",
     image: "/images/projects/hacienda/cover.webp",
     specs: {
-      area: { ru: "0.6 ГА", en: "0.6 ha" },
+      area: { ru: "1500 м²", en: "1,500 m²" },
       year: "2023",
       location: { ru: "Медное озеро", en: "Mednoye lake" },
       status: "realized",
     },
     description: {
-      ru: "Участок на берегу Медного озера. Холм организует видовые раскрытия и скрывает служебные зоны, формируя последовательность кадров по мере движения к воде.",
-      en: "A plot on the shore of Mednoye lake. A hill organizes framed views and conceals utility zones, building a sequence of shots as you move toward the water.",
+      ru: "Ландшафт загородного дома для летнего отдыха. Светлое мощение объединяет дом, бассейн и зоны отдыха в гармоничное пространство. Чёткие линии дорожек и плиточных площадок сочетаются с окружающим озеленением, создавая атмосферу лёгкости, уюта и комфорта для летних дней за городом.",
+      en: "Landscape design for a country home made for summer getaways. Light paving brings the house, pool and leisure areas together in a harmonious space. Clean path lines and paved terraces sit naturally among the planting, creating a light, welcoming and comfortable setting for summer days in the country.",
     },
     gallery: [
       "/images/projects/hacienda/gallery/01.webp",
@@ -216,7 +216,7 @@ export const projects: Project[] = [
   },
   {
     slug: "terrasso",
-    title: "Малые архитектурные формы",
+    title: { ru: "Терраса и бассейн", en: "Terrace and pool" },
     place: {
       ru: "Стокгольм, Швеция",
       en: "Stockholm, Sweden",
@@ -224,14 +224,14 @@ export const projects: Project[] = [
     category: "private",
     image: "/images/projects/terrasso/cover.webp",
     specs: {
-      area: { ru: "1 ГА", en: "1 ha" },
+      area: { ru: "900 м²", en: "900 m²" },
       year: "2021",
       location: { ru: "Стокгольм, Швеция", en: "Stockholm, Sweden" },
       status: "realized",
     },
     description: {
-      ru: "«Дом в лесу»: минимальное вмешательство в существующий лесной массив. Тонкие маршруты-настилы и небольшие площадки не нарушают естественный рельеф и корневую систему.",
-      en: "A “house in the woods”: minimal intervention into the existing forest. Thin boardwalk routes and small platforms leave the natural terrain and root systems intact.",
+      ru: "Ландшафт загородного дома с бассейном и открытой террасой. Насыпная дорожка объединяет основные зоны участка, создавая естественный переход между домом, садом и местом для отдыха у воды. Продуманная планировка и гармоничное озеленение формируют целостное пространство для комфортной жизни на природе.",
+      en: "Landscape design for a country home with a pool and open terrace. A gravel path links the main areas, creating a natural transition between the house, garden and waterside lounge. Thoughtful planning and harmonious planting make a unified space for comfortable outdoor living.",
     },
     gallery: [
       "/images/projects/terrasso/gallery/01.webp",
@@ -246,7 +246,7 @@ export const projects: Project[] = [
   },
   {
     slug: "sad",
-    title: "Земляные работы и проектирование",
+    title: { ru: "Земляные работы и проектирование", en: "Earthworks and garden design" },
     place: {
       ru: "Стокгольм, Швеция",
       en: "Stockholm, Sweden",
@@ -254,14 +254,14 @@ export const projects: Project[] = [
     category: "private",
     image: "/images/projects/garden/cover.webp",
     specs: {
-      area: { ru: "0.4 ГА", en: "0.4 ha" },
+      area: { ru: "1000 м²", en: "1,000 m²" },
       year: "2020",
       location: { ru: "Стокгольм, Швеция", en: "Stockholm, Sweden" },
       status: "realized",
     },
     description: {
-      ru: "Компактный сад с перепадом высот. Серия террас решает задачу вертикальной планировки и превращает технические подпорные стены в активные элементы среды.",
-      en: "A compact garden on a slope. A series of terraces solves the vertical grading and turns retaining walls into active elements of the environment.",
+      ru: "Ландшафтный проект с элементами японского сада, беседкой и многоуровневой планировкой. Мощение объединяет функциональные зоны участка, а подпорные стены органично вписаны в композицию и помогают обыграть перепад высот. Японский сад создаёт атмосферу уединения и спокойствия, а беседка становится уютным местом для отдыха.",
+      en: "A landscape design with Japanese garden elements, a gazebo and a multi-level layout. Paving connects the functional areas, while retaining walls fit naturally into the composition and make use of the change in level. The Japanese garden creates a sense of privacy and calm, and the gazebo offers a welcoming place to relax.",
     },
     gallery: [
       "/images/projects/garden/gallery/01.webp",

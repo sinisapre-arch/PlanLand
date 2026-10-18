@@ -15,22 +15,22 @@ export const services: { title: LocalizedString; body: LocalizedString }[] = [
   {
     title: { ru: "Предпроектное обследование", en: "Pre-project survey" },
     body: {
-      ru: "Выезд на участок, чтобы услышать, чего хочет клиент, как он будет пользоваться пространством и какие референсы у него есть. Мы проверяем официальные кадастровые чертежи и замеряем территорию самостоятельно, чтобы подтвердить, что реально возможно.",
-      en: "On-site consultation to hear what the client wants, how they'll use the space, and any references they have. We review the official cadastral surveyor drawings and then take our own measurements on site to confirm what's actually possible.",
+      ru: "Выезжаем на участок, чтобы понять, чего хочет заказчик, как он будет пользоваться пространством и какие у него есть референсы. Проверяем официальные кадастровые чертежи и самостоятельно замеряем территорию, чтобы определить, что действительно возможно.",
+      en: "We visit the site to understand what the client wants, how they will use the space and what references they have in mind. We check the official cadastral drawings and measure the site ourselves to confirm what is feasible.",
     },
   },
   {
     title: { ru: "Концептуальный проект", en: "Concept design" },
     body: {
-      ru: "Строим дизайн в цифре с помощью фотограмметрии и 3D-визуализации. Каждому клиенту даём доступ к приватной странице проекта, где живут все концептуальные чертежи и 3D-изображения — ведём через каждый этап дизайна до утверждённого плана.",
-      en: "We build out the design digitally, using photogrammetry and 3D visualization. Every client gets a private project site where all concept drawings and 3D images live, walking them through each design phase up to a final approved plan.",
+      ru: "Используем фотограмметрию и 3D-визуализацию, чтобы точно передать особенности участка и наглядно показать будущий результат. Для каждого клиента создаём персональную страницу проекта с чертежами, концептуальными решениями и 3D-визуализациями. Вы можете следить за ходом работы, знакомиться с решениями на каждом этапе и согласовывать проект до утверждения финального плана.",
+      en: "We use photogrammetry and 3D visualizations to capture the site's character and clearly show the result. Each client gets a personal project page with drawings, design concepts and 3D views. You can follow progress, review decisions at every stage and approve the design before the final plan is signed off.",
     },
   },
   {
     title: { ru: "Рабочая документация", en: "Detailed design" },
     body: {
-      ru: "Разбивочные и посадочные чертежи, схемы полива и освещения, материалы, дренаж, сносоуборочное оборудование, парковка, посадки (газон рулонный или посевной) — каждый деталь, формирующая итоговую стройку.",
-      en: "Setting-out and planting drawings, irrigation and lighting schemes, materials, drainage, snow removal, parking, planting areas (turf laid or seeded) — every detail that shapes the final build.",
+      ru: "Разбивочные и посадочные чертежи, схемы освещения и полива, подбор материалов, решения по дренажу, организации парковки и уборке снега, план озеленения с рулонным или посевным газоном — все детали, необходимые для точной реализации проекта.",
+      en: "Setting-out and planting plans, lighting and irrigation schemes, material selections, and solutions for drainage, parking and snow removal. The planting plan covers both ready-laid turf and seeded lawns — every detail needed to build the project accurately.",
     },
   },
   {
@@ -43,49 +43,47 @@ export const services: { title: LocalizedString; body: LocalizedString }[] = [
   {
     title: { ru: "Реализация", en: "Implementation" },
     body: {
-      ru: "Свои бригады строят сад — полный цикл, от вертикальной планировки до посадки крупномеров. Так как Синиша и проектировщик, и строитель, ничего не теряется между чертежом и реальностью.",
-      en: "Our own crews build the garden — full cycle, from grading to planting mature specimens. Because Sinisa is both the designer and the builder, nothing gets lost between drawing and reality.",
+      ru: "Полный цикл реализации ландшафтного проекта — от вертикальной планировки до посадки крупномеров. Собственные строительные бригады и авторский надзор руководителя компании обеспечивают точное воплощение решений на каждом этапе. Благодаря личному участию руководителя в проектировании и реализации замысел сохраняется в деталях — от чертежа до готового сада.",
+      en: "We deliver the complete landscape project, from grading to planting mature trees. Our own construction teams and the company director's design supervision ensure that every decision is carried through accurately. With the director personally involved in both design and construction, the original vision is preserved in every detail, from drawing to finished garden.",
     },
   },
   {
     title: { ru: "Уход", en: "Maintenance" },
     body: {
       ru: "Сезонный уход, чтобы сад прижился и жил десятилетиями.",
-      en: "Seasonal care to help the garden settle in and keep it thriving for years.",
+      en: "Seasonal care helps the garden establish itself and thrive for decades.",
     },
   },
 ];
 
 /** Team members. */
 export const team: {
-  name: string;
+  name: LocalizedString;
   role: LocalizedString;
   bio: LocalizedString;
   photo: string;
 }[] = [
   {
-    // Name rendered in Russian (site primary language).
-    name: "Синиша Предраговић",
+    name: { ru: "Синиша Предраговић", en: "Sinisa Predragović" },
     role: {
-      ru: "Сооснователь, дизайнер и строитель",
-      en: "Co-founder, designer & builder",
+      ru: "Сооснователь PlanoLand, дизайнер и строитель",
+      en: "PlanoLand co-founder, designer and builder",
     },
     bio: {
-      ru: "Синиша 15 лет проектировал и строил ландшафты в Швеции, прежде чем принести этот ремесло в Подмосковье с PlanoLand. Он участвует в каждом проекте от первого эскиза до последнего камня — он и проектирует сад, и строит его. Строительство — его страсть: создавать пространства, которые стоят поколениями и приносят красоту, тишину и радость тем, кто в них живёт.",
-      en: "Sinisa spent 15 years designing and building landscapes in Sweden before bringing that craft to the Moscow region with PlanoLand. He's involved in every project from the first sketch to the last stone — he's the one who designs the garden, and the one who builds it. Construction is his passion: creating spaces that stand for generations, and that bring beauty, quiet, and joy to the people who live in them.",
+      ru: "Синиша 15 лет проектировал и строил ландшафты в Швеции, прежде чем привезти это ремесло в Подмосковье и основать PlanoLand. Он участвует в каждом проекте от первого эскиза до последнего камня: сам проектирует и строит сад. Его страсть — создавать пространства на поколения, которые приносят красоту, тишину и радость тем, кто в них живёт.",
+      en: "Sinisa spent 15 years designing and building landscapes in Sweden before bringing his craft to the Moscow region and co-founding PlanoLand. He takes part in every project from the first sketch to the last stone, designing and building the garden himself. His passion is creating spaces that last for generations and bring beauty, calm and joy to the people who live in them.",
     },
     photo: "/images/studio/founders.webp",
   },
   {
-    // Name rendered in Russian (site primary language).
-    name: "Лыхно Георгий Александрович",
+    name: { ru: "Георгий Лыхно", en: "Georgy Lykhno" },
     role: {
       ru: "Сооснователь, работа с клиентами",
       en: "Co-founder, client relations",
     },
     bio: {
-      ru: "Георгий — основатель Planodom (https://planodom.ru), строящего подключаемые модульные дома по Подмосковью с репутацией быстрых, надёжных за 60 дней и стройкой, за которую он отвечает лично. В PlanoLand он ведёт клиентскую сторону каждого проекта — от первого контакта до сдачи — чтобы клиенты получали ту же полноцикловую надёжность в саде, что и клиенты Planodom в доме.",
-      en: "Georgy is the founder of Planodom (https://planodom.ru), building turnkey modular homes across the Moscow region with a reputation for fast, reliable 60-day builds and construction he personally stands behind. At PlanoLand, he leads the client side of every project — from first contact through handover — so that clients get the same full-cycle trust in their garden that Planodom clients get in their home.",
+      ru: "Георгий — основатель компании «Планодом», которая строит каркасные и каменные дома в Подмосковье и по всей России. В PlanoLand он ведёт клиентскую сторону каждого проекта — от первого контакта до сдачи, чтобы заказчики получали в саду ту же надёжность полного цикла, что и клиенты «Планодома» при строительстве дома.",
+      en: "Georgy is the founder of Planodom, which builds timber-frame and stone houses across the Moscow region and throughout Russia. At PlanoLand, he leads the client side of every project from first contact to handover, giving garden clients the same full-cycle reliability that Planodom's homebuilding clients receive.",
     },
     photo: "/images/studio/founders.webp",
   },

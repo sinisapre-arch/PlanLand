@@ -9,10 +9,6 @@ import { useLang } from "./LangContext";
 export const strings = {
   // ---- Header / nav ----
   "nav.private": { ru: "Частные сады", en: "Private gardens" },
-  "nav.public": {
-    ru: "Общественные пространства",
-    en: "Public spaces",
-  },
   "nav.home": { ru: "Главная", en: "Home" },
   "nav.portfolio": { ru: "Портфолио", en: "Portfolio" },
   "nav.scandinavian": { ru: "Скандинавский сад", en: "Scandinavian garden" },
@@ -79,8 +75,8 @@ export const strings = {
     en: "Principles of the Scandinavian garden",
   },
   "principles.lede": {
-    ru: "Гармония и спокойствие. Уверенность и безопасность. Взрыв эмоций и вдохновение. Такой сад становится настоящей инвестицией в состояние человека.",
-    en: "Harmony and calm. Confidence and safety. A burst of emotion and inspiration. Such a garden becomes a real investment in a person’s state of being.",
+    ru: "Сад создаёт пространство для отдыха и восстановления: здесь можно почувствовать спокойствие и уверенность, насладиться природой, найти вдохновение и новые эмоции. Это вклад в комфорт и качество повседневной жизни.",
+    en: "A garden creates a place to rest and recharge: a place to feel calm and secure, enjoy nature, and find inspiration and new experiences. It is an investment in comfort and the quality of everyday life.",
   },
 
   // ---- Portfolio ----
@@ -88,7 +84,6 @@ export const strings = {
   "portfolio.all": { ru: "Все проекты", en: "All projects" },
   "portfolio.filter.all": { ru: "Все", en: "All" },
   "portfolio.filter.private": { ru: "Частные", en: "Private" },
-  "portfolio.filter.public": { ru: "Общественные", en: "Public" },
 
   // ---- Catalog CTA ----
   "cta.eyebrow": {
@@ -207,8 +202,8 @@ export const strings = {
       en: "A full cycle of garden making",
     },
     "services.lede": {
-      ru: "Ведём проект от первой встречи до реализации и ухода. Дизайн и замеры — у нас внутри, поэтому дешевле, чем нанимать их отдельно. Сад можно строить поэтадно, по сезонам — не обязательно всё сразу.",
-      en: "We carry the project from the first meeting to implementation and maintenance. Design and surveying are in-house, so it costs less than hiring them separately. The garden can be built in phases across seasons — you don't have to build everything at once.",
+      ru: "Ведём проект от первой встречи до реализации и ухода. Предлагаем воплотить проект под ключ. Сад можно строить поэтапно, по сезонам — не обязательно делать всё сразу.",
+      en: "We guide each project from the first meeting through construction and ongoing care. Our turnkey service takes the design all the way to a finished garden. The work can be delivered in phases across seasons, so you do not have to do everything at once.",
     },
 
   // ---- Team ----
@@ -218,8 +213,8 @@ export const strings = {
     en: "The people who make gardens",
   },
   "team.lede": {
-    ru: "Синиша — дизайнер и строитель с 15-летним опытом в Швеции. Георгий — основатель Planodom, строит дома под ключ за 60 дней. Вместе — полный цикл: дом и сад.",
-    en: "Sinisa — designer & builder with 15 years in Sweden. Georgy — founder of Planodom, builds turnkey homes in 60 days. Together — full cycle: house and garden.",
+    ru: "Синиша Предрагович — дизайнер и строитель с 15-летним опытом в Европе и России. Георгий Лыхно — основатель компании «Планодом», строит дома под ключ по всей России. Вместе — полный цикл: дом и сад.",
+    en: "Sinisa Predragović is a designer and builder with 15 years of experience in Europe and Russia. Georgy Lykhno is the founder of Planodom, building turnkey homes across Russia. Together, they offer a complete cycle: house and garden.",
   },
 
   // ---- Contacts ----

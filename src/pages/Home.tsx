@@ -76,6 +76,8 @@ function FeaturedProjects() {
   const t = useT();
   const lp = useLocalePath();
   const { contentLocale } = useLang();
+  const projectTitle = (project: (typeof featuredProjects)[number]) =>
+    project.title[contentLocale] ?? project.title.ru;
   const scrollerRef = useRef<HTMLDivElement>(null);
 
   // Scroll the carousel by roughly one card. Direction: -1 = previous, +1 = next.
@@ -122,7 +124,7 @@ function FeaturedProjects() {
             >
               <img
                 src={project.image}
-                alt={project.title}
+                alt={projectTitle(project)}
                 className="h-full w-full object-cover opacity-85 transition duration-700 group-hover:scale-105 group-hover:opacity-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
@@ -132,7 +134,7 @@ function FeaturedProjects() {
               </div>
               <div className="absolute inset-x-5 bottom-6">
                 <h2 className="card-title-lg font-expanded font-black uppercase leading-none tracking-[-0.05em]">
-                  {project.title}
+                  {projectTitle(project)}
                 </h2>
               </div>
             </Link>

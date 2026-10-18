@@ -18,17 +18,18 @@ export default function ProjectCard({
   const lp = useLocalePath();
   const { contentLocale } = useLang();
   const label = project.label?.[contentLocale] ?? project.label?.ru;
+  const title = project.title[contentLocale] ?? project.title.ru;
 
   return (
     <Link
       to={lp(`/portfolio/${project.slug}`)}
-      className={`card-title-container group relative overflow-hidden bg-graphite ${
+      className={`card-title-container group relative h-full overflow-hidden bg-graphite ${
         feature ? "sm:col-span-2 sm:row-span-2" : ""
       }`}
     >
       <img
         src={project.image}
-        alt={project.title}
+        alt={title}
         loading="lazy"
         className="aspect-[4/3] h-full min-h-[300px] w-full object-cover opacity-90 transition duration-700 group-hover:scale-105 group-hover:opacity-100"
       />
@@ -45,7 +46,7 @@ export default function ProjectCard({
       )}
       <div className="absolute inset-x-4 bottom-4 text-cream">
         <h3 className="card-title font-expanded font-black uppercase leading-none tracking-[-0.05em]">
-          {project.title}
+          {title}
         </h3>
       </div>
     </Link>

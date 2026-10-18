@@ -17,6 +17,8 @@ export default function ProjectDetail() {
 
   if (!project) return <NotFound />;
 
+  const title = project.title[contentLocale] ?? project.title.ru;
+
   const description =
     project.description[contentLocale] ?? project.description.ru;
   const area = project.specs.area[contentLocale] ?? project.specs.area.ru;
@@ -40,7 +42,7 @@ export default function ProjectDetail() {
   return (
     <>
       <Seo
-        title={`${project.title} — ${t("nav.portfolio")}`}
+        title={`${title} — ${t("nav.portfolio")}`}
         description={description}
       />
 
@@ -48,7 +50,7 @@ export default function ProjectDetail() {
       <section className="relative h-[70vh] min-h-[460px] w-full overflow-hidden bg-graphite text-cream">
         <img
           src={project.image}
-          alt={project.title}
+          alt={title}
           className="absolute inset-0 h-full w-full object-cover opacity-80"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
@@ -61,7 +63,7 @@ export default function ProjectDetail() {
               ← {t("project.backToPortfolio")}
             </Link>
             <h1 className="font-expanded text-6xl font-black uppercase leading-[0.84] tracking-[-0.06em] sm:text-8xl lg:text-9xl">
-              {project.title}
+              {title}
             </h1>
           </div>
         </div>
@@ -103,7 +105,7 @@ export default function ProjectDetail() {
                 <div key={`${src}-${i}`} className="overflow-hidden bg-black">
                   <img
                     src={src}
-                    alt={`${project.title} — ${i + 1}`}
+                    alt={`${title} — ${i + 1}`}
                     loading="lazy"
                     className="aspect-square w-full object-cover opacity-90 transition duration-700 hover:opacity-100"
                   />
@@ -127,7 +129,7 @@ export default function ProjectDetail() {
                 {t("project.next")}
               </p>
               <h3 className="mt-2 font-expanded text-4xl font-black uppercase leading-none tracking-[-0.05em] transition group-hover:opacity-70 sm:text-6xl">
-                {next.title}
+                {next.title[contentLocale] ?? next.title.ru}
               </h3>
             </div>
             <span className="justify-self-start text-[11px] font-bold uppercase tracking-[0.2em] sm:justify-self-end">
