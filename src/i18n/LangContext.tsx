@@ -1,65 +1,49 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useMemo } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export type Locale = "ru" | "en";
-
-const LOCALE_TO_CONTENT: Record<Locale, "ru" | "en"> = {
-  ru: "ru",
-  en: "en",
-};
-
-const STORAGE_KEY = "lburo.locale";
-const DEFAULT_LOCALE: Locale = "ru";
-const VALID_LOCALES: Locale[] = ["ru", "en"];
 
 type LangContextValue = {
   locale: Locale;
   /** The locale whose content actually gets rendered. */
-  contentLocale: "ru" | "en";
+  contentLocale: Locale;
   setLocale: (locale: Locale) => void;
 };
 
 const LangContext = createContext<LangContextValue | null>(null);
 
-/**
- * Read the stored locale, migrating any now-removed locale (de/ar) to its
- * closest equivalent so users who previously picked one don't get bounced
- * back to the default.
- */
-function readInitialLocale(): Locale {
-  if (typeof window === "undefined") return DEFAULT_LOCALE;
-  const stored = window.localStorage.getItem(STORAGE_KEY) as Locale | null;
-  if (stored && VALID_LOCALES.includes(stored)) return stored;
-  // Migrate removed locales: de/ar previously rendered English content.
-  if (stored === "de" || stored === "ar") {
-    window.localStorage.setItem(STORAGE_KEY, "en");
-    return "en";
-  }
-  return DEFAULT_LOCALE;
+function localeFromPath(pathname: string): Locale {
+  return pathname === "/en" || pathname.startsWith("/en/") ? "en" : "ru";
+}
+
+function pathWithoutLocale(pathname: string): string {
+  if (pathname === "/en") return "/";
+  if (pathname.startsWith("/en/")) return pathname.slice("/en".length);
+  return pathname;
 }
 
 export function LangProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>(readInitialLocale);
+  const { pathname, search, hash } = useLocation();
+  const navigate = useNavigate();
+  const locale = localeFromPath(pathname);
 
-  const setLocale = (next: Locale) => {
-    setLocaleState(next);
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem(STORAGE_KEY, next);
-    }
-  };
-
-  useEffect(() => {
-    if (typeof document !== "undefined") {
-      document.documentElement.lang = locale;
-    }
-  }, [locale]);
+  const setLocale = useCallback(
+    (next: Locale) => {
+      const basePath = pathWithoutLocale(pathname);
+      const localizedPath =
+        next === "en"
+          ? basePath === "/"
+            ? "/en/"
+            : `/en${basePath}`
+          : basePath;
+      navigate(`${localizedPath}${search}${hash}`);
+    },
+    [hash, navigate, pathname, search],
+  );
 
   const value = useMemo<LangContextValue>(
-    () => ({
-      locale,
-      contentLocale: LOCALE_TO_CONTENT[locale],
-      setLocale,
-    }),
-    [locale],
+    () => ({ locale, contentLocale: locale, setLocale }),
+    [locale, setLocale],
   );
 
   return <LangContext.Provider value={value}>{children}</LangContext.Provider>;

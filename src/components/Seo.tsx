@@ -7,7 +7,7 @@ type Props = {
 };
 
 const SITE_NAME = "PlanoLand";
-const SITE_URL = "https://plan-land.vercel.app";
+const SITE_URL = "https://planoland.vercel.app";
 
 /** Ensure a <head> element exists (by selector), apply changes, return it. */
 function upsertHead(
@@ -49,7 +49,8 @@ export default function Seo({ title, description }: Props) {
     }
 
     // Path without the /en prefix: the Russian canonical form.
-    const isEn = location.pathname.startsWith("/en");
+    const isEn =
+      location.pathname === "/en" || location.pathname.startsWith("/en/");
     const basePath = isEn
       ? location.pathname.slice(3).replace(/\/+$/, "") || "/"
       : location.pathname.replace(/\/+$/, "") || "/";

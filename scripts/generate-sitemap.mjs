@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const SITE = "https://plan-land.vercel.app";
+const SITE = "https://planoland.vercel.app";
 
 const projectSlugs = [
   "djursholm",
