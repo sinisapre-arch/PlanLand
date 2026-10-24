@@ -349,6 +349,14 @@ function ConsultCta() {
             className="h-12 border border-cream/30 bg-transparent px-4 text-sm uppercase tracking-[0.12em] outline-none placeholder:text-cream/45"
             placeholder={t("cta.contact")}
           />
+          <textarea
+            rows={4}
+            maxLength={FIELD_LIMITS.message.max}
+            value={form.values.message}
+            onChange={(e) => form.setValue("message", e.target.value)}
+            className="border border-cream/30 bg-transparent px-4 py-3 text-sm uppercase tracking-[0.12em] outline-none placeholder:text-cream/45"
+            placeholder={t("form.messagePlaceholder")}
+          />
           <button
             type="submit"
             disabled={isSending}
