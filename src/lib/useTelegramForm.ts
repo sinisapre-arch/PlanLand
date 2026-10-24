@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLang } from "../i18n/LangContext";
 import { type StringKey, useT } from "../i18n/useT";
+import { metrikaGoal } from "./metrika";
 import {
   type ProjectType,
   type TelegramSubmitResult,
@@ -85,6 +86,8 @@ export function useTelegramForm(source: ProjectType) {
     if (result.ok) {
       setStatus({ kind: "success" });
       setValues(EMPTY);
+      // Conversion: successful lead submission (goal configured in Metrica).
+      metrikaGoal("form_submit", { form: source });
       return true;
     }
     setStatus({ kind: "error", messageKey: "form.error.send" });

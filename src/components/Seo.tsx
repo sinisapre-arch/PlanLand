@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
+import { metrikaHit } from "../lib/metrika";
 
 type Props = {
   title: string;
@@ -30,11 +31,20 @@ function upsertHead(
  */
 export default function Seo({ title, description }: Props) {
   const location = useLocation();
+  // ym init in index.html already records the first page view; every
+  // subsequent route change needs a manual hit (SPA).
+  const skipFirstHit = useRef(true);
 
   useEffect(() => {
     document.title = title.includes(SITE_NAME)
       ? title
       : `${title} — ${SITE_NAME}`;
+
+    if (skipFirstHit.current) {
+      skipFirstHit.current = false;
+    } else {
+      metrikaHit(document.title);
+    }
 
     if (description) {
       upsertHead(
