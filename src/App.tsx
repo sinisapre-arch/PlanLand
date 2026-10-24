@@ -30,7 +30,6 @@ function makeRoutes() {
       <Route path="policy" element={<Legal />} />
       <Route path="agree" element={<Legal />} />
       <Route path="documents" element={<Legal />} />
-      <Route path="op" element={<Legal />} />
       <Route path="policy-yandex" element={<Legal />} />
       <Route path="*" element={<NotFound />} />
     </>

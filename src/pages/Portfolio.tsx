@@ -25,8 +25,8 @@ export default function Portfolio() {
         title={t("portfolio.title")}
         description={
           contentLocale === "en"
-            ? "PlanoLand landscape projects in Moscow and St. Petersburg."
-            : "Портфолио проектов ландшафтной студии PlanoLand в Москве и Санкт-Петербурге."
+            ? "Private gardens designed and built by PlanoLand in Sweden."
+            : "Частные сады, спроектированные и построенные студией PlanoLand в Швеции."
         }
       />
       <PageHeader

@@ -1,60 +1,42 @@
-React + TypeScript + Vite
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# PlanoLand — planoland.vercel.app
 
-Currently, two official plugins are available:
+Marketing site for the PlanoLand landscape design studio (Russian default,
+English under `/en/`).
 
-@vitejs/plugin-react uses Babel for Fast Refresh
-@vitejs/plugin-react-swc uses SWC for Fast Refresh
-Expanding the ESLint configuration
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Stack: React 19 + TypeScript + Vite + React Router, Tailwind CSS 4.
 
-Configure the top-level parserOptions property like this:
-export default tseslint.config({
+## Commands
 
-  languageOptions: {
+```bash
+npm install        # install dependencies
+npm run dev        # local dev server (vite)
+npm run build      # production build → dist/
+```
 
-    // other options...
+## Deploy
 
-    parserOptions: {
+Vercel project `planoland`, connected to this GitHub repo — every push to
+`master` deploys automatically. `vercel.json` holds the SPA rewrite plus
+permanent redirects from old project-codename URLs
+(`/portfolio/buxus` → `/portfolio/planting`, etc.).
 
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+## Scripts
 
-      tsconfigRootDir: import.meta.dirname,
+- `node scripts/generate-sitemap.mjs` — regenerate `public/sitemap.xml`
+  (run after adding/removing routes or slugs).
+- `node scripts/optimize-images.mjs` / `optimize-galleries.mjs` — build
+  optimized webp under `public/images/projects/` from the raw originals in
+  `public/images/Project Images/` (raw originals are kept in the repo but
+  are not referenced by the site).
+- `node scripts/generate-seo-assets.mjs` — regenerate OG/Twitter images.
 
-    },
+## Structure
 
-  },
+- `src/data/projects.ts` — portfolio records (slugs must match the sitemap).
+- `src/data/content.ts` — services, team, principles, blog stubs.
+- `src/i18n/useT.ts` — all UI strings (RU source of truth, EN fallback to RU).
+- `src/lib/telegram.ts` — contact-form submission via a Cloudflare Worker
+  (bot side lives outside this repo).
 
-})
-Replace tseslint.configs.recommended to tseslint.configs.recommendedTypeChecked or tseslint.configs.strictTypeChecked
-Optionally add ...tseslint.configs.stylisticTypeChecked
-Install eslint-plugin-react and update the config:
-// eslint.config.js
-
-import react from 'eslint-plugin-react'
-
-
-export default tseslint.config({
-
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-
-  plugins: {
-
-    // Add the react plugin
-    react,
-
-  },
-
-  rules: {
-
-    // other rules...
-
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-
-    ...react.configs['jsx-runtime'].rules,
-
-  },
-
-})
+Images/fonts still hot-linked from `ext.same-assets.com` — self-hosting
+them is a known TODO.

@@ -1,7 +1,6 @@
 /**
- * Project records. `slug` matches the lburo.ru URL convention so future
- * content swaps are trivial. Image URLs reuse the same-assets CDN already
- * in use across the site.
+ * Project records. Slugs are descriptive English keywords; old codenames
+ * (buxus, terrasso, hacienda, sad) redirect to the new slugs in vercel.json.
  */
 export type ProjectCategory = "private";
 
@@ -162,7 +161,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "buxus",
+    slug: "planting",
     title: { ru: "Посадка растений", en: "Planting design" },
     place: {
       ru: "Джурсхольм, Швеция",
@@ -189,7 +188,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "hacienda",
+    slug: "summer-house-pool",
     title: { ru: "Летний загородный дом с бассейном", en: "Summer country home with a pool" },
     place: {
       ru: "Медное озеро, Ленинградская область",
@@ -215,7 +214,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "terrasso",
+    slug: "terrace-pool",
     title: { ru: "Терраса и бассейн", en: "Terrace and pool" },
     place: {
       ru: "Стокгольм, Швеция",
@@ -245,7 +244,7 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "sad",
+    slug: "japanese-garden",
     title: { ru: "Земляные работы и проектирование", en: "Earthworks and garden design" },
     place: {
       ru: "Стокгольм, Швеция",

@@ -14,10 +14,10 @@ const projectSlugs = [
   "sollentuna",
   "gustavsberg",
   "lidingo",
-  "buxus",
-  "hacienda",
-  "terrasso",
-  "sad",
+  "planting",
+  "summer-house-pool",
+  "terrace-pool",
+  "japanese-garden",
 ];
 
 // path (no locale prefix) -> priority
@@ -33,7 +33,6 @@ const pages = {
   "/policy": "0.2",
   "/agree": "0.2",
   "/documents": "0.2",
-  "/op": "0.2",
   "/policy-yandex": "0.2",
 };
 

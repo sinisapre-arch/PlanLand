@@ -1,4 +1,16 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/portfolio/buxus", "destination": "/portfolio/planting", "permanent": true },
+    { "source": "/portfolio/hacienda", "destination": "/portfolio/summer-house-pool", "permanent": true },
+    { "source": "/portfolio/terrasso", "destination": "/portfolio/terrace-pool", "permanent": true },
+    { "source": "/portfolio/sad", "destination": "/portfolio/japanese-garden", "permanent": true },
+    { "source": "/en/portfolio/buxus", "destination": "/en/portfolio/planting", "permanent": true },
+    { "source": "/en/portfolio/hacienda", "destination": "/en/portfolio/summer-house-pool", "permanent": true },
+    { "source": "/en/portfolio/terrasso", "destination": "/en/portfolio/terrace-pool", "permanent": true },
+    { "source": "/en/portfolio/sad", "destination": "/en/portfolio/japanese-garden", "permanent": true },
+    { "source": "/op", "destination": "/agree", "permanent": true },
+    { "source": "/en/op", "destination": "/en/agree", "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

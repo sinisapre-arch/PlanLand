@@ -4,9 +4,6 @@ import Seo from "../components/Seo";
 import { useLang } from "../i18n/LangContext";
 import { type StringKey, useT } from "../i18n/useT";
 
-// TODO(rebrand): domain + legal entity below are placeholders for the old
-// lburo.ru / ООО «Л-Бюро» values. Replace with PlanoLand's real domain and
-// registered legal entity once confirmed.
 const SITE_DOMAIN = "planoland.ru";
 
 type LegalDoc = {
@@ -82,17 +79,14 @@ const docs: LegalDoc[] = [
   },
 ];
 
-/** Map the `/op/` slug from the reference site to the user-agreement doc. */
+/** Map legal-page slugs to their documents. */
 function resolveKey(
   slug: string | undefined,
   pathname: string,
 ): LegalDoc["key"] {
-  if (slug === "op" || pathname.endsWith("/op")) return "agree";
-  if (slug === "policy-yandex" || pathname.endsWith("/policy-yandex"))
-    return "policy-yandex";
-  if (slug === "documents" || pathname.endsWith("/documents"))
-    return "documents";
-  return "policy";
+  if (pathname.endsWith("/policy-yandex")) return "policy-yandex";
+  if (pathname.endsWith("/documents")) return "documents";
+  return "agree";
 }
 
 export default function Legal() {

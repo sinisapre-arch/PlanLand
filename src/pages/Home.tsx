@@ -307,9 +307,9 @@ function PortfolioPreview() {
   );
 }
 
-function CatalogCta() {
+function ConsultCta() {
   const t = useT();
-  const form = useTelegramForm("catalog");
+  const form = useTelegramForm("contact");
   const isSending = form.status.kind === "sending";
   return (
     <section className="bg-graphite px-4 py-16 text-cream sm:px-6 lg:px-10 lg:py-24">
@@ -355,7 +355,9 @@ function CatalogCta() {
             className="mt-2 flex h-14 items-center justify-between bg-cream px-5 text-[11px] font-black uppercase tracking-[0.22em] text-graphite transition hover:bg-moss hover:text-cream disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSending ? t("form.sending") : t("cta.submit")}
-            <img src={assets.download} alt="" className="h-5 w-5" />
+            <span aria-hidden="true" className="text-xl">
+              →
+            </span>
           </button>
           <FormStatus
             status={form.status}
@@ -384,7 +386,7 @@ export default function Home() {
       <Studio />
       <Principles />
       <PortfolioPreview />
-      <CatalogCta />
+      <ConsultCta />
     </>
   );
 }

@@ -24,7 +24,7 @@ const EMPTY: FormValues = { name: "", contact: "", message: "" };
 
 /**
  * Shared contact-form state for both the Contacts page form and the Home
- * CatalogCta form. Handles validation, submission to the Telegram worker,
+ * consultation CTA. Handles validation, submission to the Telegram worker,
  * and localized status messages.
  */
 export function useTelegramForm(source: ProjectType) {

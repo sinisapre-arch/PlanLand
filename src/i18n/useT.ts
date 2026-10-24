@@ -85,18 +85,18 @@ export const strings = {
   "portfolio.filter.all": { ru: "Все", en: "All" },
   "portfolio.filter.private": { ru: "Частные", en: "Private" },
 
-  // ---- Catalog CTA ----
+  // ---- Consultation CTA (lead form → Telegram) ----
   "cta.eyebrow": {
-    ru: "Каталог частных садов",
-    en: "Private gardens catalogue",
+    ru: "Запись на консультацию",
+    en: "Book a consultation",
   },
   "cta.title": {
-    ru: "Получите подборку проектов PlanoLand",
-    en: "Get a selection of PlanoLand projects",
+    ru: "Начнём с разговора о вашем саде",
+    en: "Let's start with a conversation about your garden",
   },
   "cta.name": { ru: "Ваше имя", en: "Your name" },
   "cta.contact": { ru: "Телефон или email", en: "Phone or email" },
-  "cta.submit": { ru: "Скачать каталог", en: "Download catalogue" },
+  "cta.submit": { ru: "Отправить заявку", en: "Send request" },
   "cta.consent": {
     ru: "Нажимая кнопку, вы соглашаетесь на обработку персональных данных.",
     en: "By clicking the button you agree to the processing of personal data.",
@@ -213,7 +213,7 @@ export const strings = {
     en: "The people who make gardens",
   },
   "team.lede": {
-    ru: "Синиша Предрагович — дизайнер и строитель с 15-летним опытом в Европе и России. Георгий Лыхно — основатель компании «Планодом», строит дома под ключ по всей России. Вместе — полный цикл: дом и сад.",
+    ru: "Синиша Предраговић — дизайнер и строитель с 15-летним опытом в Европе и России. Георгий Лыхно — основатель компании «Планодом», строит дома под ключ по всей России. Вместе — полный цикл: дом и сад.",
     en: "Sinisa Predragović is a designer and builder with 15 years of experience in Europe and Russia. Georgy Lykhno is the founder of Planodom, building turnkey homes across Russia. Together, they offer a complete cycle: house and garden.",
   },
 

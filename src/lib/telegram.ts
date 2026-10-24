@@ -22,7 +22,6 @@ export type ProjectType =
   | "3d"
   | "drone"
   | "other"
-  | "catalog"
   | "contact";
 
 export type TelegramFormData = {
