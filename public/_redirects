@@ -1,0 +1,12 @@
+# SPA + redirect rules for Cloudflare Pages / Netlify (Vercel uses vercel.json).
+/portfolio/buxus        /portfolio/planting          308
+/portfolio/hacienda     /portfolio/summer-house-pool 308
+/portfolio/terrasso     /portfolio/terrace-pool      308
+/portfolio/sad          /portfolio/japanese-garden   308
+/en/portfolio/buxus     /en/portfolio/planting       308
+/en/portfolio/hacienda  /en/portfolio/summer-house-pool 308
+/en/portfolio/terrasso  /en/portfolio/terrace-pool   308
+/en/portfolio/sad       /en/portfolio/japanese-garden 308
+/op                     /agree                       308
+/en/op                  /en/agree                    308
+/*                      /index.html                  200
